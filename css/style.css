@@ -1,0 +1,503 @@
+ body
+    {
+     background:  #28B6F6;
+     font-size: 15px;
+    }     
+
+@font-face {
+           font-family: Gotham Bold;
+           src: url(../font/gotham_bold.ttf);
+            }
+@font-face {
+           font-family:Gotham Book;
+           src: url(../font/gotham_book.ttf);
+           }
+@font-face {
+           font-family: Gotham Medium;
+           src: url(../font/gotham_medium.ttf);
+           }
+@font-face {
+           font-family:Gotham Book Italic;
+           src: url(../font/gotham_book_italic.ttf);
+           }
+    
+    .text 
+            {
+                font-size: 2.2em;
+                color: white;
+                font-family: Gotham Book;
+                margin-left: 40%;
+                margin-top:-30%; 
+                position: relative;
+                text-align: center;
+           }
+
+
+       .email
+            {
+              background-color: #28b6f6;
+              border: 2px solid #fff;
+              color: white;
+              cursor: pointer;
+              display: inline-block;
+              font-size: 15px;
+              position: relative;
+              top: 1px;
+              left:-90px;
+              height: auto;
+              text-decoration: none;
+              width: 170px;
+              font-family: Gotham Bold;
+              padding:12px 0;
+            }
+        .about
+             {   
+             background-color: #A2C86B;
+             border: none;
+             color: white;
+             text-align: center;
+             text-decoration: none;
+             font-size: 15px;
+             position: relative;
+             top: -40px;
+            left:120px;
+            height: auto;
+            width: 170px;
+            font-family: Gotham Bold;
+            padding: 14px 0;
+            
+            }
+        .inputbox
+                {   
+                 position: fixed;
+                 background-color: #28B6F6;
+                 border: none;
+                 border-color: white;
+                 color: white;
+                 padding: 12px 50px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 3em;
+                 margin: 470px 450px;   
+                 font-family: Gotham Bold;        
+                }
+   .date-formate
+         { 
+         position: relative;
+         background-color: #28B6F6;
+         border: none;
+         border-color: white;
+         color: white;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 15px;
+         margin: 540px 545px;
+         font-family: Gotham Book;
+         }
+
+.modal {
+         display: none; /* Hidden by default */
+         position: fixed; /* Stay in place */
+         z-index: 1; /* Sit on top */
+         left: 0;
+         top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+         background-color: rgb(0,0,0); /* Fallback color */
+         background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+        }
+
+/* Modal Content/Box */
+.modal-content 
+                {
+                background-color: transparent;
+                margin: 0% auto;
+                padding: 20px;
+                border: 0px solid #fff;
+                width: 90%;
+                height: 80%;
+                position: fixed;
+                left: 10px;
+                top: 0px;
+                line-height: 170%;
+                font-size: 34px;
+                }
+/* The Close Button */
+.close 
+{
+
+
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-family: Gotham Bold;
+    margin: -19px -136px;
+
+   
+}
+.close:hover,
+.close:focus 
+            {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            }
+.close2 
+{
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-family: Gotham Bold;
+  margin: -62px -134px;
+    
+}
+.close2:hover,
+.close2:focus 
+            {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            }
+
+.counter
+        {
+         margin: 0 auto;
+         width:500px;
+        }
+.button
+        {
+         margin: 9% 55%;
+        }
+.text1
+      {
+        font-size: 20px;
+        color: white;
+        font-family: Gotham Bold;
+        margin-left: 8%;
+        margin-top: 2%;
+      }
+.text2
+      {
+      font-size: 18px;
+      color: white;
+      font-family: Gotham Book;
+      padding:10px;
+      margin-left: 8%;
+      line-height: 30px;
+      font-weight: 700;
+     }
+.text3
+     {
+        font-size: 24px;
+       color: white;
+        font-family: Gotham Book;
+        margin-left: 8%;
+        line-height: 44px;
+        font-weight: 700;
+        word-spacing: 4px;
+        text-align: justify;
+
+     }
+
+     .text5
+     {
+       font-size: 18px;
+        color: white;
+        font-family: Gotham Bold;
+        margin-left: 8%;
+        line-height: 12px;
+     }
+
+.modal-content2 
+                {
+                 background-color: transparent;
+                 margin: 4% auto;
+                 padding: 20px;
+                 border: 0px solid #fff;
+                 width: 90%;
+                 height: 80%;
+                 position: fixed;
+                 left: 10px;
+                 top: 0px;
+                 line-height: 10%;
+                 font-size: 18px;
+                }
+.emailbox
+            {
+             width: 416px;
+             height: 152px;
+             background-color: transparent;
+             cursor: pointer;
+             display: inline-block;
+             font-size: 14px;
+             position: relative;
+             top: 30px;
+            text-decoration: none;
+             width: 500px;
+             font-family: Gotham Bold;
+             color: white;
+             margin-left: 37%;
+             height: 50px;
+            }
+.email-content
+            {
+                font-size: 22px;
+                color: white;
+                font-family: Gotham Book Italic;
+                position: relative;
+                line-height: 210%;
+                margin-left: 13%;
+                top:23px;
+                word-spacing: 2px;
+            }
+.emailmessage
+            {
+                font-size: 14px;
+                color: white;
+                font-family: Gotham Bold;
+                position: relative;
+                line-height: 110%;
+                margin-left: 37%;
+                top: 34px;
+                
+            }
+
+.text4
+    {
+        font-size: 20px;
+        color: white;
+        font-family: Gotham Book;
+        position: relative;
+        top: 15px;
+        line-height: 210%;
+        margin-left: 13%;
+        top:4px;
+        font-weight: 700;
+    }
+.sub
+    {   
+        background-color: #28B6F6;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        position: relative;
+        top: 42px;
+        height: 41px;
+        width: 168px;
+        font-family: Gotham Bold;
+        margin-left: 51%;
+    }
+	
+	
+	
+.main
+{
+  margin-top:5%;
+}
+.text {
+    margin-left: 15px!important;
+    margin-right: 15px!important;
+    margin-top: 10%!important;
+    word-spacing: 6px;
+}
+
+.button {
+    margin: 10% 0 0 0!important;
+}
+
+.about {
+    top: 10px!important;
+    left: 20%!important;
+}
+
+.email {
+    top: 10px!important;
+    left: 14%!important;
+}
+
+.inputbox,.date-formate
+{
+	margin:0!important;
+	position:relative!important;
+	padding:12px 50px;
+	background:transparent;
+}
+.date-formate
+{
+	padding:2px 8%;
+}
+.date-formate span
+{
+	margin-right:10px;
+}
+.date-formate span:nth-child(2),
+.date-formate span:nth-child(3){
+	margin-right:5%!important;
+}
+.img-responsive
+{
+    margin-left: -13%;
+}
+
+@media screen and (max-width: 960px)
+ {
+
+.img-responsive
+{
+    margin-left: 0%;
+}
+
+.text,.button,.email-content
+    {
+		
+        text-align:center;
+	}
+	.about, .email
+    {
+		left:0!important;
+	}
+	.button
+    {
+		margin-bottom:10%!important;
+	}
+  .date-formate
+  {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 767px)
+ {
+.about, .email
+ {
+    margin-bottom: 15px;
+}
+.emailbox
+ {
+     width: 216px;
+    margin-left: 32px;
+}
+.sub
+{
+width: auto;
+font-size: 9px;
+padding: 16px;
+height: 28px;
+margin-left: 103px;
+}
+.emailmessage
+{
+
+font-size: 8px;
+margin-left: 31px;
+}
+
+
+.text 
+{
+    margin-left: 0px!important;
+    font-size: 1.5em;
+}
+.text1
+{
+
+font-size: 16px;
+margin-left: 2px
+}
+.text2
+{
+
+font-size: 12px;
+margin-left: 2px;
+word-spacing: 2px;
+}
+
+.text5
+     {
+        
+        font-size: 12px;
+        margin-left: 14px;
+    line-height: 0px;
+
+     }
+.text3
+{
+font-size: 12px;
+line-height: 20px;
+margin-left: 2px;
+}
+
+.text4
+    {
+        
+        font-size: 12px;
+        line-height: 49px;
+        margin-left: 10px;
+    }
+
+.email-content
+{
+    font-size: 12px;
+    margin-left: 10px;
+}
+.close2 
+{
+    margin: -18px -37px;
+  }
+ .close
+ {
+    
+    margin: -22px -40px;
+ }  
+
+ 
+.counter
+ {
+    width: auto;
+}
+
+.inputbox, .date-formate
+ {
+    margin: 0 auto!important;
+    display: block;
+    text-align: center;
+    width: 100%;
+
+}
+.inputbox 
+{
+    font-size: 2em;
+}
+	.main 
+ {
+    margin-top: 10%;
+}
+
+.date-formate table
+{
+    width: 330px;
+    margin: 0 auto;
+}
+
+}
+.inputbox
+{
+  padding:0!important; 
+}
+.date-formate
+{
+  padding-left: 0;
+  max-width: 600px;
+  padding-top: 0!important;
+}
+table tr th {
+    text-align: center;
+}
+}
