@@ -20,7 +20,7 @@
 	
 	  // mysql_set_charset("UTF8");
 
-	   $query = mysql_query("SELECT id,title,summary,image,token,url FROM `gs_resources` ORDER BY date_created DESC limit 8" ); 
+	   $query = mysql_query("SELECT id,title,summary,image,token,url FROM `gs_resources` WHERE `status`= 1 ORDER BY date_created DESC limit 8" ); 
 	 //  header('Content-type: text/html; charset=utf-8');
        
 	  
@@ -105,7 +105,7 @@ p {
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.php">
                             <img src="assets/img/freeze/logo.png" alt="" class="logo">
                         </a>
                     </div>
@@ -321,12 +321,26 @@ p {
 				   <div class="one">
 				   <div id="corner2">
 				   <div id="corner" >		  
-				   <div><img src="http://getsportyportal.getsporty.in/uploads/resources/<?php echo $test[$i][3]; ?>" alt=""  style=" width:200px ;height:115px;" ></div>
+				   <div>
+				   <?php
+				   $temp_url = $_SERVER['REQUEST_URI'];
+                   $data = explode("/",$temp_url);
+                   if($data[1] == 'getsportysite')
+				   {
+                      ?>				   
+				   <img src="/forms/uploads/resources/<?php echo $test[$i][3]; ?>" alt=""  style=" width:200px ;height:115px;" >
+
+				   <?php } else{ ?>
 				   
+				   <img src="http://getsportyportal.getsporty.in/uploads/resources/<?php echo $test[$i][3]; ?>" alt=""  style=" width:200px ;height:115px;" >
+				   
+				   <?php } ?>
+				   </div>
 				    <div><p><b><?php echo $test[$i][1];?></b></p>
 				    </div>
 				    <div>
-				    <p ><?php echo $test[$i][2];?></p>
+				    <p><?php echo $test[$i][2];?></p>
+					<div>
 					<?php 
 					if($test[$i][4]==1) 
 					{
@@ -336,9 +350,9 @@ p {
 					}
 					 else{
 					  ?>	  
-				        <a href="<?php echo $test[$i][5];?>"  target="_blank" >continue reading.</a>		 
+				        <a  href="<?php echo $test[$i][5];?>"  target="_blank">continue reading.</a>		 
 					 <?php }  ?>
-				   
+				   </div>
                    </div>
                    </div>
                     </div>
@@ -365,7 +379,7 @@ p {
                             <img src="assets/img/freeze/freeze-angled2.png" alt="">
                         </div>
                         <div class="platforms">
-                            <a href="/build/getsportylite.apk" onclick="return confirm('Are you sure you want to download this item?');" class="btn btn-primary inverse scrollpoint sp-effect1">
+                            <a href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en"  class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-android fa-3x pull-left"></i>
                                 <span>Download for</span><br>
                                 <b>Android</b>
@@ -500,7 +514,7 @@ p {
             <div class="container"><div>
 			   
 				
-                <a href="#" class="scrollpoint sp-effect3">
+                <a href="index.php" class="scrollpoint sp-effect3">
                     <img src="assets/img/freeze/logo.png" alt="" class="logo">
                 </a>
                 <div class="social">
@@ -510,7 +524,7 @@ p {
                 </div>
                 <div class="rights">
                     <p>Copyright &copy; 2016</p>
-                    <p>Design By &nbsp; &nbsp;<a href="http://staging.getsporty.in/" target="_blank"><b>Dark Horse Sports</b></a></p>
+                    <p>Design By &nbsp; &nbsp;<a href="#"><b>Dark Horse Sports</b></a></p>
                 </div>
 				</div>
             </div>
