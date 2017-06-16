@@ -712,24 +712,30 @@ function getResources()
         data = JSON.parse(result);
         data = data.data;
         var resources_temp ='';
-http://www.getsporty.in/blog.php?id=64
-        
+        var res_url = '';
+             
         for (var i = 1; i < data.length; i++)
-        {
+        {    if(data[i]['token'] != 0)
+             {
+                res_url = 'http://darkhorsesports.in/blogdetail.html?n='+data[i]['id']+'';
+             }else
+             {
+                res_url = data[i]['url'];
+             }
             if (i==1)
-            {
-                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>';
+            {   
+                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div>';
             }
             else
             {
         if(i%3==0)
          {
-                resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+                resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div><div class="carousel-item">';   
             
         }
         else
         {
-            resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>'; 
+            resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div>'; 
         }
      }
 
