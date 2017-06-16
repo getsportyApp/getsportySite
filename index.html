@@ -107,7 +107,7 @@
 Your Sports<br> "Partner" in Making
 
 <div class="linkto">
-<a href="http://www.darkhorsesports.in/">LEARN MORE</a>
+<a href="#about">LEARN MORE</a>
 <a href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en">GET APP</a>
 </div>
 </div>
@@ -547,7 +547,8 @@ on your ward&#39;s performance through this unique feature
 </div>
 </section>
 <!--/Section: Contact v.1-->
-
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+</div>
 
     <!--/Main layout-->
     <!--Footer-->
@@ -712,27 +713,33 @@ function getResources()
         data = JSON.parse(result);
         data = data.data;
         var resources_temp ='';
-http://www.getsporty.in/blog.php?id=64
-        
         for (var i = 1; i < data.length; i++)
         {
+            var title   = data[i]['title']; 
+            title       = title.substring(0,32);
+            var summary = data[i]['summary']; 
+            summary = summary.substring(0,100);
+            if (data[i]['image']!='')
+            {
+
             if (i==1)
             {
-                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>';
+              //  console.log(str);
+                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" " ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a  href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>';
             }
             else
             {
         if(i%3==0)
          {
-                resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+                resources_temp +='<div class="col-md-4" ><div class="card" "><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
             
         }
         else
         {
-            resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+data[i]['summary']+'</p><a href="http://www.getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>'; 
+            resources_temp +='<div class="col-md-4" ><div class="card" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>'; 
         }
      }
-
+}
         } // End of for Loop
         $("#id1").html(resources_temp);
     }}); //End of ajax
@@ -755,29 +762,34 @@ getResources();
                $.ajax(
                 {url: "http://localhost/testingapp/create_database.php?act=gs_searching&module=2",crossDomain: true ,success: function(result)
        {
-
         data = JSON.parse(result);
         data = data.data;
         var event_temp ='';
         for (var i = 1; i <data.length; i++)
         {
+            var name         = data[i]['name']; 
+            name             = name.substring(0,32);
+            var description  = data[i]['description']; 
+            description = description.substring(0,100);
+        if(data[i]['image']!=)
+        {
             if (i==1)
             {
-                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
+                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
             }
             else
             {
              if(i%3==0)
             {
-                event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+                event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
             
         }
         else
         {
-            event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
+            event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
         }
      }
-
+}
         } // End of for Loop
 
         $("#id2").html(event_temp);
@@ -804,34 +816,38 @@ getEvent();
                $.ajax(
                 {url: "http://localhost/testingapp/create_database.php?act=gs_searching&module=3",crossDomain: true ,success: function(result)
        {
-
         data = JSON.parse(result);
         data = data.data;
-
         var tournament_temp ='';
         for (var i = 1; i < data.length; i++)
         {
+            var name   = data[i]['name']; 
+            name       = name.substring(0,32);
+            var description = data[i]['description']; 
+            description = description.substring(0,100);
+            if (data[i]['image']!='')
+            {
             if (i==1)
             {
-                tournament_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
+                tournament_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
             }
             else
             {
              if(i%3==0)
             {
-                tournament_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+                tournament_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
             
         }
         else
         {
-            tournament_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['name']+'</h4><p class="card-text">'+data[i]['description']+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
+            tournament_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/staging/uploads/tournament/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
         }
      }
-
+}
         } // End of for Loop
 
         $("#id3").html(tournament_temp);
-        console.log(tournament_temp);
+       // console.log(tournament_temp);
     }}); //End of ajax
 
 } // End of Function
@@ -841,6 +857,12 @@ getTournament();
 });// End of Doucument Ready
 
 </script>
+
+
+
+
+
+
 <script>
 $('#save').click(function () {
     var user_msg = {"name":$('#form41').val(),
@@ -857,17 +879,26 @@ $('#save').click(function () {
     datatype:"json",
     crossDomain:true,
     success:function(result)
-    {
+    {   
          data = JSON.parse(result);
         status = data.status;
+        alert(result);
         if(status == 1)
         {
-        alert("Thanks for contacting us");
+          var data = '<div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Success</h4> </div> <div class="modal-body">Thanks For contacting us</div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div>';
+            $('#myModal').html(data);
+            $('#myModal').modal('show');
         $('#email').val('');
         }
         else
         {
-         alert(data.msg);
+             var data = '<div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Success</h4> </div> <div class="modal-body">You are not  contacting us</div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div>';
+          
+
+            $('#myModal').html(data);
+            $('#myModal').modal('show');
+
+      //   alert(data.msg);
         }
     }    
 
