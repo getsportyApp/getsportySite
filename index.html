@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
+    
     <title>Getsporty</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +29,17 @@
 
 </head>
 
-<body class="fixed-sn black-skin bg-skin-lp1">
+
+<body class="fixed-sn black-skin bg-skin-lp1" id="bdy">
+
+<div class="se-pre-con">
+    
+    <img class="load" src="gif/loader2.gif" style="    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 80px;">
+    </div>
+</div>
 		<div class="collapse navbar-collapse mob-nav" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav" >
                 <li class="nav-item">
@@ -63,7 +75,7 @@
             </div>       
             <ul class="navbar-nav mr-auto">
                 <li class="">
-                       <a class="navbar-brand" href="#">
+                       <a class="nav-link navbar-brand" href="#bdy">
                             <div class="hj-logo"><img src="img/logo.png"></div>
                         </a>
                 </li>                                
@@ -109,8 +121,12 @@
 Your Sports<br> "Partner" in Making
 
 <div class="linkto">
+
 <a href="#about">LEARN MORE</a>
+
+<span>
 <a href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en">GET APP</a>
+</span>
 </div>
 </div>
 
@@ -131,7 +147,7 @@ Your Sports<br> "Partner" in Making
 <div class="title" >Know About</div>
 <div class="sub-heading">Learn more about this feature packed App</div>
 </div>
-<div class="col-md-4 col-sm-4 scrollpoint sp-effect1 active animated fadeInLeft">
+<div class="col-md-4 col-sm-12 scrollpoint sp-effect1 active animated fadeInLeft">
                         <div class="media text-right feature rel">
                           <div class="media-body">
                                 <h3 class="media-heading">Events and Tournaments</h3>
@@ -199,7 +215,7 @@ guide to reveal the path for sports enthusiasts to reach the pinnacle of their s
                                 </div>
                     </div>
 
-<div class="col-sm-4">
+<div class=" col-md-4 col-sm-12">
 <div class="img-wrap active img-1"><img src="img/freeze-angled1.png" /></div>
 <div class="img-wrap img-2"><img src="img/freeze-angled2.png" /></div>
 <div class="img-wrap img-3"><img src="img/freeze-angled1.png" /></div>
@@ -211,9 +227,9 @@ guide to reveal the path for sports enthusiasts to reach the pinnacle of their s
 <div class="img-wrap img-9"><img src="img/freeze-angled1.png" /></div>
 </div>
 
-<div class="col-md-4 col-sm-4 scrollpoint sp-effect2 active animated fadeInRight">
+<div class="col-md-4 col-sm-12 scrollpoint sp-effect2 active animated fadeInRight">
                         <div class="media feature rel">
-                            <a id="img-6" class="pull-left clk" href="#">
+                            <a id="img-6" class="pull-left clk" href="#" onclick="return false;" >
                                 <i class="fa fa-user fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -293,11 +309,19 @@ on your ward&#39;s performance through this unique feature
 
     <!--Controls -->
     <div class="controls-top">
-        <a class="btn-floating btn-small" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating btn-small" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        <a style="position:inherit;" class="btn-floating btn-small" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a style="position:inherit;" class="btn-floating btn-small" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
     </div>
 
-
+<div id="img1" style="   
+    top: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    opacity: 0.7;">
+<div  class="loader1">
+</div>
+</div>
     <!--Slides-->
     <div class="carousel-inner" role="listbox" id="id1">
 
@@ -310,6 +334,7 @@ on your ward&#39;s performance through this unique feature
 
 </div>
 
+</div>
 </div>
 
 </section>  
@@ -467,15 +492,15 @@ on your ward&#39;s performance through this unique feature
 
         <!--First column-->
         <div class="col-md-8">
-            <form>
+            <form name="form">
                 <!--First row-->
                 <div class="row">
                     <!--First column-->
                     <div class="col-md-6">
                         <div class="md-form">
                             <div class="md-form">
-                                <input type="text" id="form41" class="form-control">
-                                <label for="form41" class="">Your name</label>
+                                <input name="name" type="text" id="form41" class="form-control">
+                                <label id="name" for="form41" class="">Your name</label>
                             </div>
                         </div>
                     </div>
@@ -484,8 +509,8 @@ on your ward&#39;s performance through this unique feature
                     <div class="col-md-6">
                         <div class="md-form">
                             <div class="md-form">
-                                <input type="text" id="form52" class="form-control" >
-                                <label for="form52" class="">Your email</label>
+                                <input type="text" name="email" id="form52" class="form-control" >
+                                <label id="email" for="form52" class="">Your email</label>
                             </div>
                         </div>
                     </div>
@@ -496,8 +521,8 @@ on your ward&#39;s performance through this unique feature
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form">
-                            <input type="text" id="form51" class="form-control">
-                            <label for="form51" class="">Subject</label>
+                            <input type="text" name="subject" id="form51" class="form-control">
+                            <label id="subject" for="form51" class="">Subject</label>
                         </div>
                     </div>
                 </div>
@@ -509,8 +534,8 @@ on your ward&#39;s performance through this unique feature
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="form76" class="md-textarea"></textarea>
-                            <label for="form76">Your message</label>
+                            <textarea type="text" name="message" id="form76" class="md-textarea"></textarea>
+                            <label id="message" for="form76">Your message</label>
                         </div>
 
                     </div>
@@ -519,11 +544,28 @@ on your ward&#39;s performance through this unique feature
             </form>
 
             <div class="center-on-small-only">
-            <button type="submit" id="save"  class="btn btn-primary">Send</button>
+            <button type="button" id="save" onclick="valname()" style="position: inherit;" class="btn btn-primary">Send</button>
               <!--  <a class="btn btn-primary">Send</a>  -->
             </div>
         </div>
         <!--.First column-->
+
+                    <!-- modalpopup-->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      
+                           </div>
+
+                    <!--LOADER... DO NOT DELETE-->
+                       <div id="img" style="    position: fixed;
+                    top: 0px;
+                    background-color: black;
+                    width: 100%;
+                    left:0px;
+                    height: 100%;
+                    opacity: 0.7;">
+                <div  class="loader"></div>
+                </div>
+
 
         <!--Second column-->
         <div class="col-md-4">
@@ -639,15 +681,50 @@ on your ward&#39;s performance through this unique feature
 		    <script type="text/javascript" src="js/main.min.js"></script>
 
     <script>
+
+
+
+function load() {
+         $('.se-pre-con').fadeOut();
+      }
+
+      window.onload = load;
+
+
+
     $(".button-collapse").sideNav();
         
     var el = document.querySelector('.custom-scrollbar');
     Ps.initialize(el);
     
      $('.datepicker').pickadate();
+
+
+
+
     </script>
+    <script>
+$(document).ready(function(){
+  $(".nav-link").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
 
 <script type="text/javascript">
+
+$('.clk').click(function(e) {
+    e.preventDefault();
+});
+
 $('.img-wrap').hide();
 $('.detail').hide();
 $('.img-wrap.active').show();
@@ -657,7 +734,9 @@ $(document).ready(function(){
         var cl = this.id;
         $('.img-wrap').hide();
         $('.detail').hide();
+        $('.detail').css('opacity','0');
         $('.' + cl).show();
+        $('.' + cl).css('opacity','1');
         $('.rel').css('opacity','0.3');
         $(this).closest('.rel').css('opacity','1');
     });
@@ -708,10 +787,12 @@ $("#link-5").click(function() {
 jQuery(document).ready(function(){ 
 
 function getResources()
+
 {
    $.ajax({
     url:"http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=blog_api&token_id=dhs2016&token=0,1,3",crossDomain: true ,success: function(result)
     {
+        $( "#img1" ).hide();
         data = JSON.parse(result);
         data = data.data;
         var resources_temp ='';
@@ -763,7 +844,9 @@ getResources();
     <!--********************* Get the Data from Event   *****************-->
 
     <script type="text/javascript">
+    $('.img1').show();
           jQuery(document).ready(function() {
+
       function getEvent()
       {
                $.ajax(
@@ -811,12 +894,7 @@ getEvent();
 
 
 </script>
-
-
-
-    
-
-    <script type="text/javascript">
+<script type="text/javascript">
       jQuery(document).ready(function() {
       function getTournament()
       {
@@ -864,14 +942,80 @@ getTournament();
 });// End of Doucument Ready
 
 </script>
-
-
-
-
-
-
 <script>
+
+$( "#img" ).hide();
+function valname()
+    {
+        var n=0;
+        var email1=document.forms["form"]["email"].value;
+        var atpos = email1.indexOf("@");
+        var dotpos = email1.lastIndexOf(".");
+
+         if(document.forms["form"]["name"].value == "")
+        {
+            $( '#form41' ).css("border-bottom-color","red");
+             n++;
+        }
+        else
+        {
+            $( '#form41' ).css("border-bottom-color","green");       
+        }
+        if(document.forms["form"]["subject"].value == "")
+        {
+            $( '#form51' ).css("border-bottom-color","red");
+             n++;
+        }
+        else
+        {
+            $( '#form51' ).css("border-bottom-color","green");       
+        }
+        if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email1.length)
+        {
+            $( '#form52' ).css("border-bottom-color","red");
+            n++;  
+        }
+        else
+        {
+            $( '#form52' ).css("border-bottom-color","green");  
+        }
+        if(document.forms["form"]["message"].value == "")
+        {
+            $( '#form76' ).css("border-bottom-color","red");
+            n++; 
+        }
+        else
+        {
+            $( '#form76' ).css("border-bottom-color","green"); 
+           
+        }
+        if(n==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+
+
+
+
+
 $('#save').click(function () {
+
+
+     if(!valname())
+        {
+            return false;
+        }
+        else
+        {
+            $( "#img" ).show();
+             var msg = '';
     var user_msg = {"name":$('#form41').val(),
             "email":$('#form52').val(),
             "subject":$('#form51').val(),
@@ -885,35 +1029,55 @@ $('#save').click(function () {
     data:JSON.stringify(user_msg),
     datatype:"json",
     crossDomain:true,
+    timeout: 10000,
     success:function(result)
     {   
+        $( "#img" ).hide();
          data = JSON.parse(result);
          status = data.status;
         if(status == 1)
-        { alert(data.msg)
-          
-        $('#email').val('');
+        {  msg = 'Thanks For Showing Interest';
+                        $("#form41").val(''); 
+                        $("#form52").val('');    
+                        $("#form51").val('');  
+                        $("#form76").val(''); 
+                        $( '#form41' ).css("border-bottom-color","#ccc");
+                        $( '#form52' ).css("border-bottom-color","#ccc");
+                        $( '#form51' ).css("border-bottom-color","#ccc"); 
+                        $( '#form76' ).css("border-bottom-color","#ccc"); 
+                        $( '#name' ).removeClass('active');
+                        $( '#email' ).removeClass('active');
+                        $( '#subject' ).removeClass('active');
+                        $( '#message' ).removeClass('active');
+
+
         }
         else
-        { alert(data.msg)
-            
+        {
+             msg =  'Server error! Please try again later';
         }
+         var message = '<div class="modal-dialog"><div class="modal-content" style="border:none; border-radius:2px;background-color:whitesmoke;"><div class="modal-body"><button type="button" class="close" data-dismiss="modal">&times;</button>  <p class="modal-style">'+msg+'</p> </div> <div class="modal-footer" style="border-top:none;padding-top:0px;"> <button type="button" style="border-radius:2px;" class="btn btn-default" data-dismiss="modal">Close</button> </div> </div> </div>';
+
+                    $('#myModal').html(message);
+                    $('#myModal').modal('show');
+    },
+    error:function(){
+         $( "#img" ).hide();
+                    msg =  'Server error! Please try again later';
+                    var message = '<div class="modal-dialog"><div class="modal-content" style="border:none; border-radius:2px;background-color:whitesmoke;"><div class="modal-body"><button type="button" class="close" data-dismiss="modal">&times;</button>  <p class="modal-style">'+msg+'</p> </div> <div class="modal-footer" style="border-top:none;padding-top:0px;"> <button type="button" style="border-radius:2px;" class="btn btn-default" data-dismiss="modal">Close</button> </div> </div> </div>';
+
+                    $('#myModal').html(message);
+                    $('#myModal').modal('show');
+
     }    
 
  });
 
+}
 });
 
+
 </script>
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

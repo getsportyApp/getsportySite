@@ -144,6 +144,7 @@ a.pull-right {
     padding: 20px;
     border-radius: 50%;
     margin-left: 15px;
+
 }
 a.pull-left {
     box-shadow: 2px 2px #ccc;
@@ -178,6 +179,9 @@ padding:6% 15px;
     text-align: left;
     border: 1px solid #ececec;
     box-shadow: 1px 1px 5px #ececec;
+    -webkit-transition: opacity 1.5s ease-out;
+    transition: opacity 1.5s ease-out;
+
 }
 .abso {
     position: absolute;
@@ -273,4 +277,55 @@ border-color: transparent #F5F5F5 transparent transparent;
 
 .trigger {
     display: none;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+        position: fixed;
+    top: 50%;
+    font-size: 20px;
+    background-color: black;
+    left: 50%;
+}
+.loader1 {
+    border: 4px solid #222; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+       position: relative;
+    top: 50%;
+    font-size: 20px;
+   
+    left: 50%;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.weight100{font-weight: 100; font-size: 10px; }
+ .modal-style{font-family: 'Bubbler One', sans-serif; font-size: 36px; text-align: center; margin-top: 23px; }
+
+@media screen and (max-width: 400px) {
+    .linkto span {
+        display: block;
+        
+    }
+}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('') center no-repeat #fff;
 }
