@@ -160,9 +160,15 @@ footer h5 {
     text-align: left!important;
 }
 h3.media-heading {
-    padding: 24px 0;
+    padding: 15px 0;
     font-size: 22px;
 }
+
+@media only screen and (min-width : 750px) {
+    .wd250{
+        width:250px;
+    }
+    }
 .about-item {
     text-align: center;
 }
@@ -174,18 +180,18 @@ padding:6% 15px;
 }
 .rel{ position:relative;}
 .detail{
-    padding: 20px;
+   
     width: 100%;
-    text-align: left;
-    border: 1px solid #ececec;
-    box-shadow: 1px 1px 5px #ececec;
-    -webkit-transition: opacity 1.5s ease-out;
-    transition: opacity 1.5s ease-out;
-
+    text-align: center;
+   font-size: 12.5px;
+   color: #8f8a8a;
 }
 .abso {
     position: absolute;
     top: 80px;
+}
+.center{
+    text-align: center;
 }
 .iconn {
     box-shadow: 2px 2px 3px #ccc;
@@ -196,7 +202,9 @@ padding:6% 15px;
     padding-top: 35px;
     margin-bottom: 20px;
 }
-
+.mr25{
+    margin-top: 25px;
+}
 .latest_new,.about-us,.tournaments{
 background:#F5F5F5;
 }
@@ -204,7 +212,11 @@ a#link-7 {
     margin-left: 15px;
 }
 .banner {
-    background: url(../img/bg.jpg)no-repeat center /cover;
+    background: url(../img/bg2.jpg)no-repeat center /cover;
+    background-attachment: fixed;
+}
+.wd35{
+    width:50px;
 }
 .head {
     margin: 30% 0;
@@ -214,11 +226,22 @@ a#link-7 {
     color: #fff;
     font-weight: bold;
 }
+
+.head1 {
+    margin: 30% 0;
+    font-size: 33px;
+    float: right;
+    text-align: left;
+    color: #fff;
+   
+}
+
 .linkto a {
     font-size: 22px;
     font-weight: normal;
     padding: 10px 20px;
     border: 2px solid;
+    color:white;
 }
 .linkto a:hover{
 background:#03A9F4;
@@ -312,9 +335,10 @@ border-color: transparent #F5F5F5 transparent transparent;
 .weight100{font-weight: 100; font-size: 10px; }
  .modal-style{font-family: 'Bubbler One', sans-serif; font-size: 36px; text-align: center; margin-top: 23px; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
     .linkto span {
         display: block;
+        margin-top: 10px;
         
     }
 }
@@ -328,4 +352,11 @@ border-color: transparent #F5F5F5 transparent transparent;
     height: 100%;
     z-index: 9999;
     background: url('') center no-repeat #fff;
+}
+body{
+    font-family: 'Galano Grotesque',sans-serif;
+}
+@media(min-width: 802px){ .col5{ max-width: 20%; float: left; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; } }
+#app{
+    background-color: #ededed;
 }
