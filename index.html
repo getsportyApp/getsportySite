@@ -6,7 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design for Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
+    
+    <title>Getsporty</title>
+    <!-- title bar icon-->
+    <link rel="icon" type="image/png" href="img/logo11.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
@@ -19,20 +23,32 @@
             background-repeat: no-repeat; 
             background-position: center center; 
             background-attachment: fixed;
-        }
+        }.banner-img-wrap.animated.fadeInLeft {
+    padding: 13% 0 0 0;
+}
     </style>
      <link href="css/style.css" rel="stylesheet">
 
 </head>
 
-<body class="fixed-sn black-skin bg-skin-lp1">
+
+<body class="fixed-sn black-skin bg-skin-lp1" id="bdy">
+
+<div class="se-pre-con">
+    
+    <img class="load" src="gif/loader2.gif" style="    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 80px;">
+    </div>
+</div>
 		<div class="collapse navbar-collapse mob-nav" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav" >
                 <li class="nav-item">
-                    <a id="link-2" class="nav-link" href="#about">About</a>
+                    <a id="link-2" class="nav-link" href="#about">App Features</a>
                 </li>
                 <li class="nav-item">
-                    <a id="link-3" class="nav-link" href="#news" >Latest News</a>
+                    <a id="link-3" class="nav-link" href="#news" >Latest Resources</a>
                 </li>
                 <li class="nav-item">
                     <a id="link-4" class="nav-link" href="#app">Get App</a>
@@ -61,17 +77,17 @@
             </div>       
             <ul class="navbar-nav mr-auto">
                 <li class="">
-                       <a class="navbar-brand" href="#">
+                       <a class="nav-link navbar-brand" href="#bdy">
                             <div class="hj-logo"><img src="img/logo.png"></div>
                         </a>
                 </li>                                
             </ul> 			
             <ul class="nav navbar-nav ml-auto flex-row" >
                 <li class="nav-item">
-                    <a id="link-2" class="nav-link" href="#about">About</a>
+                    <a id="link-2" class="nav-link" href="#about">App Features</a>
                 </li>
                 <li class="nav-item">
-                    <a id="link-3" class="nav-link" href="#news">Latest News</a>
+                    <a id="link-3" class="nav-link" href="#news">Latest Resources</a>
                 </li>
                 <li class="nav-item">
                     <a id="link-4" class="nav-link" href="#app">Get App</a>
@@ -98,17 +114,21 @@
 <div class="row">
 
 <div class="col-sm-6">
-<div class="banner-img-wrap animated fadeInLeft">
-<img src="img/hand-freeze (1).png" class="img-responsive" />
+<div class="banner-img-wrap animated fadeInLeft" style="padding-top: 100px;text-align: center;padding-bottom: 20px;">
+<img src="img/freezeimage1.png" class="img-responsive wd250 " />
 </div>
 </div>
 <div class="col-sm-6">
-<div class="head animated fadeInRight">
-Your Sports<br> "Partner" in Making
-
+<div class="head1 animated fadeInRight">
+Indian first Mobile App <br>for  Aspiring Sports Professionals
+<br><br>
 <div class="linkto">
+
 <a href="#about">LEARN MORE</a>
+
+<span>
 <a href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en">GET APP</a>
+</span>
 </div>
 </div>
 
@@ -126,141 +146,194 @@ Your Sports<br> "Partner" in Making
 <div class="container">
 <div class="row">
 <div class="col-sm-12 spaceAll">
-<div class="title" >Know About</div>
+<div class="title" >App Features</div>
 <div class="sub-heading">Learn more about this feature packed App</div>
 </div>
-<div class="col-md-4 col-sm-4 scrollpoint sp-effect1 active animated fadeInLeft">
-                        <div class="media text-right feature rel">
-                          <div class="media-body">
-                                <h3 class="media-heading">Events and Tournaments</h3>
-                            </div>  
-                            <a id="img-1" class="pull-right clk" href="#">
-                                <i class="fa fa-calendar fa-2x"></i>
+<div class="col-sm-12 scrollpoint sp-effect1 active animated fadeInLeft" style="margin-bottom: 70px; margin-top: 30px;">
+<div class="row">
+                       <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                           
+                            <a  class="clk" href="#">
+                               <img class="wd35" src="img/siteicons/Events.png" />
                             </a> 
                         </div>
+                        <div class="media-body">
+                                <h3 class="media-heading">Events</h3>
+                            </div> 
 						
                          
                               <div class="detail img-1">
                                     Be never short on practice. Get all the updates on the latest and the upcoming sports events and tournaments in the area near you.
                               </div>
-                        <div class="media text-right feature rel">
-                          <div class="media-body">
-                                <h3 class="media-heading">Videos</h3>
-                            </div>  
-                            <a id="img-2" class="pull-right clk" href="#">
-                                <i class="fa fa-video-camera fa-2x"></i>
-                            </a>                            
+                              <div class="mr25"></div>
+                              </div>
+
+                              <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                           
+                            <a  class="clk" href="#">
+                               <img class="wd35" src="img/siteicons/Events.png" />
+                            </a> 
                         </div>
-						
+                        <div class="media-body">
+                                <h3 class="media-heading">Tournaments</h3>
+                            </div> 
+                        
                          
-<div class="detail img-2">Here you can find motivational videos, tutorial videos and manuals to help aspiring athletes understand the basics of their favorite sport
-</div>
-                        <div class="media text-right feature rel">
-                           <div class="media-body">
-                                <h3 class="media-heading">Job Listing</h3>
-                            </div> <a id="img-3" class="pull-right clk" href="#">
-                                <i class="fa fa-certificate fa-2x"></i>
+                              <div class="detail img-1">
+                                    Be never short on practice. Get all the updates on the latest and the upcoming sports events and tournaments in the area near you.
+                              </div>
+                              <div class="mr25"></div>
+                              </div>
+                       
+
+<div class="col-sm-12 col5 center">
+                        <div class=" rel">
+                           <a id="img-5" class="clk" href="#">
+                                <img class="wd35" src="img/siteicons/Performance Icon.png" />
+                            </a>
+                            
+                        </div> 
+                        
+                          <div class="media-body">
+                                <h3 class="media-heading">Performance Assessment</h3>
+                            </div>
+                              <div class="detail img-5">Get your daily performance assessed by professionals or be the master of your own training sessions
+                                </div>
+                                <div class="mr25"></div>
+                    </div>
+
+
+
+
+
+ <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                           <a class="clk" href="#">
+                               <img class="wd35" src="img/siteicons/Jobs.png" />
                             </a>
                             
                         </div>
-						
+						 <div class="media-body">
+                                <h3 class="media-heading">Job Listing</h3>
+                            </div>
                          
                               <div class="detail img-3">Find your dream sports job. Browse through all the latest sports jobs in the Goverment or private sector
 
 through our specially devoted &quot;Sports Job Portal&quot;
                                 </div>
-                        <div class="media text-right feature rel">
-                            <div class="media-body">
-                                <h3 class="media-heading">Content and Articles</h3>
-                            </div> <a id="img-4" class="pull-right clk" href="#">
-                                <i class="fa fa-briefcase fa-2x"></i>
+                                <div class="mr25"></div>
+                                </div>
+                                 <div class=" col-sm-12 col5 center">
+                        <div class="rel">
+                            <a  class="clk" href="#">
+                                <img class="wd35" src="img/siteicons/Log.png" />
                             </a>
                            
                         </div>
+                        <div class="media-body">
+                                <h3 class="media-heading">Resources</h3>
+                            </div> 
 						
                          
                               <div class="detail img-4">Not an everyday content but a fearsome approach to take on the state of Indian sports and a complete
 
 guide to reveal the path for sports enthusiasts to reach the pinnacle of their sport
                                 </div>
-                    <div class="media text-right feature rel">
-                          <div class="media-body">
-                                <h3 class="media-heading">Performance Assessment</h3>
-                            </div>  <a id="img-5" class="pull-right clk" href="#">
-                                <i class="fa fa-book fa-2x"></i>
+                                <div class="mr25"></div>
+                                </div>
+
+                                </div>
+
+                    
+ </div>
+<br><br>
+<div class="col-sm-12 scrollpoint sp-effect2 active animated fadeInRight">
+<div class="row">
+                       <div class="col-sm-12 col5 center">
+                        <div class=" rel">
+                           <a id="img-5" class="clk" href="#">
+                                <img class="wd35" src="img/siteicons/Coach.png" />
                             </a>
                             
                         </div> 
-						
-                         
-                              <div class="detail img-5">Get your daily performance assessed by professionals or be the master of your own training sessions
+                        
+                          <div class="media-body">
+                                <h3 class="media-heading">Coach</h3>
+                            </div>
+                              <div class="detail img-5">Information about the coaches are given
                                 </div>
+                                <div class="mr25"></div>
                     </div>
 
-<div class="col-sm-4">
-<div class="img-wrap active img-1"><img src="img/freeze-angled1.png" /></div>
-<div class="img-wrap img-2"><img src="img/freeze-angled2.png" /></div>
-<div class="img-wrap img-3"><img src="img/freeze-angled1.png" /></div>
-<div class="img-wrap img-4"><img src="img/freeze-angled2.png" /></div>
-<div class="img-wrap img-5"><img src="img/freeze-angled1.png" /></div>
-<div class="img-wrap img-6"><img src="img/freeze-angled2.png" /></div>
-<div class="img-wrap img-7"><img src="img/freeze-angled1.png" /></div>
-<div class="img-wrap img-8"><img src="img/freeze-angled2.png" /></div>
-<div class="img-wrap img-9"><img src="img/freeze-angled1.png" /></div>
-</div>
-
-<div class="col-md-4 col-sm-4 scrollpoint sp-effect2 active animated fadeInRight">
-                        <div class="media feature rel">
-                            <a id="img-6" class="pull-left clk" href="#">
-                                <i class="fa fa-user fa-2x"></i>
+                       
+                        <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                            <a id="img-6" class="clk" href="#" onclick="return false;" >
+                                <img class="wd35" src="img/siteicons/Trainer.png" />
                             </a>
-                            <div class="media-body">
+                            
+                        </div>
+						<div class="media-body">
                                 <h3 class="media-heading">Training Log</h3>
                             </div>
-                        </div>
-						
                          
                               <div class="detail img-6">Track your workouts, save your history and manage your performance with this dedicated training log
                                 </div>
-                        <div class="media feature rel">
-                            <a id="img-7" class="pull-left clk" href="#">
-                                <i class="fa fa-list-alt fa-2x"></i>
+                                <div class="mr25"></div>
+                                </div>
+
+                                <div class="col-sm-12 col5 center">
+                        <div class=" rel">
+                            <a id="img-7" class="clk" href="#">
+                               <img class="wd35" src="img/siteicons/Results1.png" />
                             </a>
-                            <div class="media-body">
+                            
+                        </div>
+						<div class="media-body">
                                 <h3 class="media-heading">Post Results</h3>
                             </div>
-                        </div>
-						
                          
                               <div class="detail img-7">Compare your last day&#39;s performance with your recent results
                                 </div>
-                        <div class="media feature rel">
-                            <a id="img-8" class="pull-left clk" href="#">
-                                <i class="fa fa-search-plus fa-2x"></i>
+                                <div class="mr25"></div>
+                                </div>
+                                <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                            <a id="img-8" class="clk" href="#">
+                              <img class="wd35" src="img/siteicons/Connect.png" />
                             </a>
-                            <div class="media-body">
+                            
+                        </div>
+						<div class="media-body">
                                 <h3 class="media-heading">Connect</h3>
                             </div>
-                        </div>
-						
                          
                               <div class="detail img-8">Contact the best professionals, trainers or the coaches to help you refine your skills and be the player
 
 that you have always dreamt about
                                 </div>
-                        <div class="media feature rel">
-                            <a id="img-9" class="pull-left clk" href="#">
-                                <i class="fa  fa-trophy fa-2x"></i>
+                                <div class="mr25"></div>
+                                </div>
+                                <div class="col-sm-12 col5 center">
+                        <div class="rel">
+                            <a id="img-9" class="clk" href="#">
+                                <img class="wd35" src="img/siteicons/Parent.png" />
                             </a>
-                            <div class="media-body">
+                            
+                        </div>
+						<div class="media-body">
                                 <h3 class="media-heading">Parent</h3>
                             </div>
-                        </div>
-						
                          
                               <div class="detail img-9">Book an upcoming event or tournament or just hire a personal trainer or coach for your child. Keep a tab
 
 on your ward&#39;s performance through this unique feature
+                                </div>
+                                <div class="mr25"></div>
+                                </div>
+
                                 </div>
                     </div>
 </div>
@@ -274,7 +347,7 @@ on your ward&#39;s performance through this unique feature
 <div class="container-fluid">
 <div class="container">
     <div class="col-sm-12 spaceAll">
-        <div class="title">Latest New</div>
+        <div class="title">Latest Resources</div>
         <div class="sub-heading">See what’s included in the App </div>
     </div>
 
@@ -291,11 +364,19 @@ on your ward&#39;s performance through this unique feature
 
     <!--Controls -->
     <div class="controls-top">
-        <a class="btn-floating btn-small" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating btn-small" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        <a style="position:inherit;" class="btn-floating btn-small" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a style="position:inherit;" class="btn-floating btn-small" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
     </div>
 
-
+<div id="img1" style="   
+    top: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    opacity: 0.7;">
+<div  class="loader1">
+</div>
+</div>
     <!--Slides-->
     <div class="carousel-inner" role="listbox" id="id1">
 
@@ -309,6 +390,7 @@ on your ward&#39;s performance through this unique feature
 </div>
 
 </div>
+</div>
 
 </section>  
 
@@ -326,30 +408,30 @@ on your ward&#39;s performance through this unique feature
 
 
 
-<section class="event" id="event">
+<!-- <section class="event" id="event">
 <div class="container-fluid">
 <div class="container">
 <div class="col-sm-12 spaceAll">
 <div class="title">Events</div>
 <div class="sub-heading" id="Event">See what’s included in the App</div>
-</div>
+</div> -->
 
 
 <!-- Nav tabs -->
-<div class="row">
+<!-- <div class="row">
     
-    <div class="col-md-12">
+    <div class="col-md-12"> -->
         <!-- Tab panels -->
-        <div class="tab-content vertical">
+    <!--     <div class="tab-content vertical"> -->
             <!--Panel 1-->
-            <div class="tab-pane fade in show active" id="panel22" role="tabpanel">
-          <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel">
+            <!-- <div class="tab-pane fade in show active" id="panel22" role="tabpanel">
+          <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel"> -->
 
     <!--Controls -->
-    <div class="controls-top">
+   <!--  <div class="controls-top">
         <a class="btn-floating btn-small" href="#multi-item-example1" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
         <a class="btn-floating btn-small" href="#multi-item-example1" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
+    </div> -->
     <!--/.Controls-->
 
     <!--Indicators
@@ -361,41 +443,41 @@ on your ward&#39;s performance through this unique feature
     <!--/.Indicators-->
 
     <!--Slides-->
-    <div class="carousel-inner" role="listbox" id="id2">
+    <!-- <div class="carousel-inner" role="listbox" id="id2">
 
     </div>
 
 </div>
 
-</section>  
+</section>   -->
 
         
 
 
-<section class="tournaments" id="tournaments" id="tournaments">
+<!-- <section class="tournaments" id="tournaments" id="tournaments">
 <div class="container-fluid">
 <div class="container">
 <div class="col-sm-12 spaceAll">
 <div class="title">Latest tournaments</div>
 <div class="sub-heading" >See what’s included in the App</div>
 </div>
-
+ -->
 
 <!-- Nav tabs -->
-<div class="row">
+<!-- <div class="row">
     
-    <div class="col-md-12">
+    <div class="col-md-12"> -->
         <!-- Tab panels -->
-        <div class="tab-content vertical">
-            <!--Panel 1-->
-            <div class="tab-pane fade in show active" id="panel23" role="tabpanel">
-          <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
+<!--         <div class="tab-content vertical">
+ -->            <!--Panel 1-->
+            <!-- <div class="tab-pane fade in show active" id="panel23" role="tabpanel">
+          <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel"> -->
 
     <!--Controls -->
-    <div class="controls-top">
+   <!--  <div class="controls-top">
         <a class="btn-floating btn-small" href="#multi-item-example2" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
         <a class="btn-floating btn-small" href="#multi-item-example2" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
+    </div> -->
     <!--/.Controls-->
 
     <!--Indicators
@@ -407,18 +489,18 @@ on your ward&#39;s performance through this unique feature
     /.Indicators-->
 
     <!--Slides-->
-    <div class="carousel-inner" role="listbox" id="id3">
+    <!-- <div class="carousel-inner" role="listbox" id="id3"> -->
 
         <!--First slide-->
         
 
-
+<!-- 
     </div>
 
 </div>
 
 </section>   
-
+ -->
             
 
 
@@ -437,7 +519,7 @@ on your ward&#39;s performance through this unique feature
 <div class="col-sm-6">
 <div class="animated fadeInRight">
 <div class="img-wrap1">
-<img src="img/android-img.png" />
+<img style="max-width:100%" src="img/freezeimage2.png" />
 </div>
 </div>
 </div>
@@ -465,15 +547,20 @@ on your ward&#39;s performance through this unique feature
 
         <!--First column-->
         <div class="col-md-8">
-            <form>
+            <form name="form">
                 <!--First row-->
                 <div class="row">
                     <!--First column-->
                     <div class="col-md-6">
                         <div class="md-form">
                             <div class="md-form">
+<<<<<<< HEAD
                                 <input type="text" id="form41" class="form-control" required="Please enter name">
                                 <label for="form41" class="">Your name</label>
+=======
+                                <input name="name" type="text" id="form41" class="form-control">
+                                <label id="name" for="form41" class="">Your name</label>
+>>>>>>> 5868b3e6eb87a3e32f04fdd9ddd74c06c13f74f1
                             </div>
                         </div>
                     </div>
@@ -482,8 +569,13 @@ on your ward&#39;s performance through this unique feature
                     <div class="col-md-6">
                         <div class="md-form">
                             <div class="md-form">
+<<<<<<< HEAD
                                 <input type="email" id="form52" class="form-control" name="email">
                                 <label for="form52" class="">Your email</label>
+=======
+                                <input type="text" name="email" id="form52" class="form-control" >
+                                <label id="email" for="form52" class="">Your email</label>
+>>>>>>> 5868b3e6eb87a3e32f04fdd9ddd74c06c13f74f1
                             </div>
                         </div>
                     </div>
@@ -494,8 +586,13 @@ on your ward&#39;s performance through this unique feature
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form">
+<<<<<<< HEAD
                             <input type="text" id="form51" class="form-control" name="subject">
                             <label for="form51" class="">Subject</label>
+=======
+                            <input type="text" name="subject" id="form51" class="form-control">
+                            <label id="subject" for="form51" class="">Subject</label>
+>>>>>>> 5868b3e6eb87a3e32f04fdd9ddd74c06c13f74f1
                         </div>
                     </div>
                 </div>
@@ -507,8 +604,13 @@ on your ward&#39;s performance through this unique feature
                     <div class="col-md-12">
 
                         <div class="md-form">
+<<<<<<< HEAD
                             <textarea type="text" id="form76" class="md-textarea" ></textarea>
                             <label for="form76">Your message</label>
+=======
+                            <textarea type="text" name="message" id="form76" class="md-textarea"></textarea>
+                            <label id="message" for="form76">Your message</label>
+>>>>>>> 5868b3e6eb87a3e32f04fdd9ddd74c06c13f74f1
                         </div>
 
                     </div>
@@ -517,11 +619,28 @@ on your ward&#39;s performance through this unique feature
             </form>
 
             <div class="center-on-small-only">
-            <button type="submit" id="save"  class="btn btn-primary">Send</button>
+            <button type="button" id="save" onclick="valname()" style="position: inherit;" class="btn btn-primary">Send</button>
               <!--  <a class="btn btn-primary">Send</a>  -->
             </div>
         </div>
         <!--.First column-->
+
+                    <!-- modalpopup-->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      
+                           </div>
+
+                    <!--LOADER... DO NOT DELETE-->
+                       <div id="img" style="    position: fixed;
+                    top: 0px;
+                    background-color: black;
+                    width: 100%;
+                    left:0px;
+                    height: 100%;
+                    opacity: 0.7;">
+                <div  class="loader"></div>
+                </div>
+
 
         <!--Second column-->
         <div class="col-md-4">
@@ -637,107 +756,90 @@ on your ward&#39;s performance through this unique feature
 		    <script type="text/javascript" src="js/main.min.js"></script>
 
     <script>
+
+
+
+function load() {
+         $('.se-pre-con').fadeOut();
+      }
+
+      window.onload = load;
+
+
+
     $(".button-collapse").sideNav();
         
     var el = document.querySelector('.custom-scrollbar');
     Ps.initialize(el);
     
      $('.datepicker').pickadate();
+
+
+
+
     </script>
-
-<script type="text/javascript">
-$('.img-wrap').hide();
-$('.detail').hide();
-$('.img-wrap.active').show();
+    <script>
 $(document).ready(function(){
-    $('.clk').hover(function($e){
-       $e.preventDefault();
-        var cl = this.id;
-        $('.img-wrap').hide();
-        $('.detail').hide();
-        $('.' + cl).show();
-        $('.rel').css('opacity','0.3');
-        $(this).closest('.rel').css('opacity','1');
-    });
-	
-    $('.cust-evt li:nth-child(1) a').click(function(){	
-$('.cust-evt li:nth-child(2) a:after').hide();	
-$('.cust-evt li:nth-child(3) a:after').hide();	
-	});
-	
-
+  $(".nav-link").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
 });
-
-var myDiv = $('.card-text');
-myDiv.text(myDiv.text().substring(0,120) + ' [...]')
-
-$(document).ready(function(){
-$("#link-1").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#us").offset().top
-    }, 100);
-});
-$("#link-2").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#now").offset().top
-    }, 100);
-});
-$("#link-3").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#news").offset().top
-    }, 100);
-});
-$("#link-4").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#app").offset().top
-    }, 100);
-});
-$("#link-5").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#support").offset().top
-    }, 100);
-});
-});
-
 </script>
+
+
 
 <script type="text/javascript">
 
 jQuery(document).ready(function(){ 
 
 function getResources()
+
 {
    $.ajax({
-    url:"http://localhost/testingapp/getSportyLite/litecontroller.php?act=gs_list",crossDomain: true ,success: function(result)
+    url:"http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=blog_api&token_id=dhs2016&token=0,1,3",crossDomain: true ,success: function(result)
     {
+        $( "#img1" ).hide();
         data = JSON.parse(result);
         data = data.data;
         var resources_temp ='';
+        var res_url = '';
+        var title   = ''; 
+        var summary = ''; 
+               
         for (var i = 1; i < data.length; i++)
-        {
-            var title   = data[i]['title']; 
-            title       = title.substring(0,32);
-            var summary = data[i]['summary']; 
-            summary = summary.substring(0,100);
-            if (data[i]['image']!='')
-            {
-
+        {    if(data[i]['url'] == '' || data[i]['url'] == null)
+             {
+                res_url = 'http://darkhorsesports.in/blogdetail.html?n='+data[i]['id']+'';
+             }else
+             {
+                res_url = data[i]['url'];
+             }
+             title       = data[i]['title'].substring(0,32);
+             summary     = data[i]['summary'].substring(0,200);
             if (i==1)
-            {
-              //  console.log(str);
-                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" " ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a  href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>';
+            {   
+                resources_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div>';
+
             }
             else
             {
         if(i%3==0)
          {
-                resources_temp +='<div class="col-md-4" ><div class="card" "><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
-            
+               resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div><div class="carousel-item">';   
+
         }
         else
         {
-            resources_temp +='<div class="col-md-4" ><div class="card" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+'</p><a href="http://getsporty.in/blog.php?id='+data[i]['id']+'" class="btn btn-primary">Read More..</a></div></div></div>'; 
-        }
+           resources_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://portal.getsporty.in/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div>'; 
+
      }
 }
         } // End of for Loop
@@ -756,7 +858,9 @@ getResources();
     <!--********************* Get the Data from Event   *****************-->
 
     <script type="text/javascript">
+    $('.img1').show();
           jQuery(document).ready(function() {
+
       function getEvent()
       {
                $.ajax(
@@ -804,12 +908,7 @@ getEvent();
 
 
 </script>
-
-
-
-    
-
-    <script type="text/javascript">
+<script type="text/javascript">
       jQuery(document).ready(function() {
       function getTournament()
       {
@@ -857,14 +956,80 @@ getTournament();
 });// End of Doucument Ready
 
 </script>
-
-
-
-
-
-
 <script>
+
+$( "#img" ).hide();
+function valname()
+    {
+        var n=0;
+        var email1=document.forms["form"]["email"].value;
+        var atpos = email1.indexOf("@");
+        var dotpos = email1.lastIndexOf(".");
+
+         if(document.forms["form"]["name"].value == "")
+        {
+            $( '#form41' ).css("border-bottom-color","red");
+             n++;
+        }
+        else
+        {
+            $( '#form41' ).css("border-bottom-color","green");       
+        }
+        if(document.forms["form"]["subject"].value == "")
+        {
+            $( '#form51' ).css("border-bottom-color","red");
+             n++;
+        }
+        else
+        {
+            $( '#form51' ).css("border-bottom-color","green");       
+        }
+        if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email1.length)
+        {
+            $( '#form52' ).css("border-bottom-color","red");
+            n++;  
+        }
+        else
+        {
+            $( '#form52' ).css("border-bottom-color","green");  
+        }
+        if(document.forms["form"]["message"].value == "")
+        {
+            $( '#form76' ).css("border-bottom-color","red");
+            n++; 
+        }
+        else
+        {
+            $( '#form76' ).css("border-bottom-color","green"); 
+           
+        }
+        if(n==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+
+
+
+
+
 $('#save').click(function () {
+
+
+     if(!valname())
+        {
+            return false;
+        }
+        else
+        {
+            $( "#img" ).show();
+             var msg = '';
     var user_msg = {"name":$('#form41').val(),
             "email":$('#form52').val(),
             "subject":$('#form51').val(),
@@ -878,44 +1043,55 @@ $('#save').click(function () {
     data:JSON.stringify(user_msg),
     datatype:"json",
     crossDomain:true,
+    timeout: 10000,
     success:function(result)
     {   
+        $( "#img" ).hide();
          data = JSON.parse(result);
-        status = data.status;
-        alert(result);
+         status = data.status;
         if(status == 1)
-        {
-          var data = '<div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Success</h4> </div> <div class="modal-body">Thanks For contacting us</div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div>';
-            $('#myModal').html(data);
-            $('#myModal').modal('show');
-        $('#email').val('');
+        {  msg = 'Thanks For Showing Interest';
+                        $("#form41").val(''); 
+                        $("#form52").val('');    
+                        $("#form51").val('');  
+                        $("#form76").val(''); 
+                        $( '#form41' ).css("border-bottom-color","#ccc");
+                        $( '#form52' ).css("border-bottom-color","#ccc");
+                        $( '#form51' ).css("border-bottom-color","#ccc"); 
+                        $( '#form76' ).css("border-bottom-color","#ccc"); 
+                        $( '#name' ).removeClass('active');
+                        $( '#email' ).removeClass('active');
+                        $( '#subject' ).removeClass('active');
+                        $( '#message' ).removeClass('active');
+
+
         }
         else
         {
-             var data = '<div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Success</h4> </div> <div class="modal-body">You are not  contacting us</div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div>';
-          
-
-            $('#myModal').html(data);
-            $('#myModal').modal('show');
-
-      //   alert(data.msg);
+             msg =  'Server error! Please try again later';
         }
+         var message = '<div class="modal-dialog"><div class="modal-content" style="border:none; border-radius:2px;background-color:whitesmoke;"><div class="modal-body"><button type="button" class="close" data-dismiss="modal">&times;</button>  <p class="modal-style">'+msg+'</p> </div> <div class="modal-footer" style="border-top:none;padding-top:0px;"> <button type="button" style="border-radius:2px;" class="btn btn-default" data-dismiss="modal">Close</button> </div> </div> </div>';
+
+                    $('#myModal').html(message);
+                    $('#myModal').modal('show');
+    },
+    error:function(){
+         $( "#img" ).hide();
+                    msg =  'Server error! Please try again later';
+                    var message = '<div class="modal-dialog"><div class="modal-content" style="border:none; border-radius:2px;background-color:whitesmoke;"><div class="modal-body"><button type="button" class="close" data-dismiss="modal">&times;</button>  <p class="modal-style">'+msg+'</p> </div> <div class="modal-footer" style="border-top:none;padding-top:0px;"> <button type="button" style="border-radius:2px;" class="btn btn-default" data-dismiss="modal">Close</button> </div> </div> </div>';
+
+                    $('#myModal').html(message);
+                    $('#myModal').modal('show');
+
     }    
 
  });
 
+}
 });
 
+
 </script>
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
