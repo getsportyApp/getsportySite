@@ -86,6 +86,9 @@ display:block;
 .fr{
 float:right;
 }
+.fl{
+    float: left;
+}
 .w100{
 width:100%;
 }
@@ -103,9 +106,7 @@ a#navbarDropdownMenuLink {
 a.nav-link.waves-effect.waves-light.hj {
     padding: 1.5rem 15px;
 }
-.fr{
-float:right;
-}
+
 .tr{
 text-align:right;
 }
@@ -126,6 +127,9 @@ width:50%;
 }
 .w300{
 max-width:300px;
+}
+.fs16{
+    font-size: 16px;
 }
 nav.navbar.fixed-top.navbar-toggleable-md.navbar-dark.scrolling-navbar.double-nav {
     padding: 5px;max-height:70px;
@@ -447,4 +451,30 @@ body{
 @media(min-width: 802px){ .col5{ max-width: 20%; float: left; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; } }
 #app{
     background-color: #ededed;
+}
+.cut{
+    margin-top: -18%;
+}
+@media only screen and (max-width : 576px   ) {
+    .cut{
+    margin-top: -31%;
+}
+    }
+    .idimg{
+        width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    }
+.fs16{
+    font-size: 16px;
+}
+ .dropdown .dropdown-menu .dropdown-item:hover{
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    border-radius: 0px;
+ }
+ @media only screen and (min-width : 993px   ) {
+    .navmob{
+        display: none;
+    }
 }

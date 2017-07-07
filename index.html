@@ -50,7 +50,7 @@
     </div>
 </div>
 		<div class="collapse navbar-collapse mob-nav" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav" >
+		<ul class="nav navbar-nav navmob" >
                 <li class="nav-item">
                     <a id="link-2" class="nav-link" href="#about">App Features</a>
                 </li>
@@ -66,6 +66,7 @@
                 <li class="nav-item">
                     <a id="link-5" class="nav-link" href="#support">Support</a>
                 </li>
+               
                 <li  class="nav-item last">
                     <a id="link-7" class="nav-link" href="http://portal.getsporty.in/index.php/forms/new_registration/" >Partner With Us!</a>
                 </li>     
@@ -82,6 +83,7 @@
             <!-- Breadcrumb-->
 <div class="navbar-header trigger">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
                     <img src="img/trigger.png" />
                 </button>
             </div>       
@@ -108,9 +110,27 @@
                 <li class="nav-item">
                     <a id="link-5" class="nav-link" href="#support">Support</a>
                 </li>
+                
                 <li class="nav-item last">
                     <a id="link-7" class="nav-link" href="http://portal.getsporty.in/index.php/forms/new_registration/">Partner With Us!</a>
                 </li>                                   
+            </ul>
+            <ul class="nav navbar-nav  flex-row" >
+            <li   class="nav-item">
+                     <div class="dropdown">
+                     <a href="#" class="nav-link" style="        background-color: transparent;padding: 3px 15px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="idimg" src="img/slide.jpg" ></a>
+                         
+                          <ul class="dropdown-menu" style="left: -222%;width: 227px;margin-top: 18%;
+                              padding: 14px;    background-color: rgba(3, 169, 244,0.5);" aria-labelledby="dropdownMenuButton">
+                          
+                            <li><h2 style="font-size: 20px;  color:#ffffff;  padding-bottom: 16px; padding-left: 9px;">Welcome, User</h2></li>
+                            <li class="fl">
+                            <a class="dropdown-item" style="font-size: 16px;  color:#ffffff;     border: 1px solid #ffffff;      padding: 5px 13px;" href="#">Profile</a></li>
+                            <li class="fr"><a class="dropdown-item" style="    border: 1px solid #ffffff;font-size: 16px;   color:#ffffff;    padding: 5px 13px;" href="#">Sign Out</a></li>
+                            
+                    </ul>
+                </div>
+                </li>
             </ul>
 				
         </nav>
@@ -532,7 +552,7 @@ on your ward&#39;s performance through this unique feature
 <div class="col-sm-6">
 <div class="animated fadeInRight">
 <div class="img-wrap1">
-<img style="max-width:100%" src="img/freezeimage2.png" />
+<img style="max-width:120%" src="img/freezeimage2.png" />
 </div>
 </div>
 </div>
@@ -546,7 +566,7 @@ on your ward&#39;s performance through this unique feature
 
 
 
-
+<div class="cut" style="position: relative;">
 <section id="team" style="    background: url(img/bg2.jpg)no-repeat center /cover;
     background-attachment: fixed;">
 <div class="container">
@@ -730,6 +750,7 @@ on your ward&#39;s performance through this unique feature
 
 
 </section>
+</div>
 
 
 
@@ -937,6 +958,15 @@ on your ward&#39;s performance through this unique feature
 		    <script type="text/javascript" src="js/main.min.js"></script>
 
     <script>
+
+
+$(document).click(function(e) {
+    if (!$(e.target).is('.nav-link') || $(e.target).is('.nav-link')) {
+        $('.collapse').collapse('hide');        
+    }
+});
+       
+
 
 $('.carousel').carousel({
     interval: false
