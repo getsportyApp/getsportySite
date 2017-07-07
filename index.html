@@ -115,7 +115,7 @@
                     <a id="link-7" class="nav-link" href="http://portal.getsporty.in/index.php/forms/new_registration/">Partner With Us!</a>
                 </li>                                   
             </ul>
-            <ul class="nav navbar-nav  flex-row" >
+            <ul class="nav navbar-nav  flex-row" id="user_view">
             <li   class="nav-item">
                      <div class="dropdown">
                      <a href="#" class="nav-link" style="        background-color: transparent;padding: 3px 15px;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="idimg" src="img/slide.jpg" ></a>
@@ -931,8 +931,8 @@ on your ward&#39;s performance through this unique feature
         <div class="social-section">
             <ul>
                 <li><a class="btn-floating btn-small btn-fb" href="https://www.facebook.com/getsportyindia/"><i class="fa fa-facebook" ></i></a></li>
-                <li><a class="btn-floating btn-small btn-tw" href="https://twitter.com/"><i class="fa fa-twitter"> </i></a></li>
-                <li><a class="btn-floating btn-small btn-gplus" href="https://plus.google.com/"><i class="fa fa-google-plus"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-tw" href="javascript:void(0)"><i class="fa fa-twitter"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-gplus" href="javascript:void(0)"><i class="fa fa-google-plus"> </i></a></li>
             </ul>
         </div>
         <!--/.Social buttons-->
@@ -1088,7 +1088,7 @@ getResources();
             name             = name.substring(0,32);
             var description  = data[i]['description']; 
             description = description.substring(0,100);
-        if(data[i]['image']!=)
+        if(data[i]['image']!='')
         {
             if (i==1)
             {
@@ -1123,6 +1123,8 @@ getEvent();
 </script>
 <script type="text/javascript">
       jQuery(document).ready(function() {
+      var storage = new CrossStorageClient('https://getsporty.in/index.html');
+     // alert(storage);
       function getTournament()
       {
                $.ajax(
