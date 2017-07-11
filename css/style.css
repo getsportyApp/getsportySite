@@ -481,3 +481,6 @@ body{
     .navbar.navbar-dark .breadcrumb a:hover, .navbar.navbar-dark .navbar-nav .nav-item a:hover {
     color: #333;
 }
+.btn-linkedin{
+        background-color: #2773b0;
+}
