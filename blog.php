@@ -1,5 +1,5 @@
 <?php
-
+include_once("analyticstracking.php");
 $var= $_GET['id'];
 
 //$con = mysql_connect('localhost', 'root', 'mysql');

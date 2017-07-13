@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3SWFF5');</script>
+<!-- End Google Tag Manager -->
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +48,10 @@
 
 
 <body class="fixed-sn black-skin bg-skin-lp1" id="bdy">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3SWFF5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="se-pre-con">
     
     <img class="load" src="gif/loader2.gif" style="    position: fixed;
@@ -1076,53 +1086,53 @@ getResources();
     <!--********************* Get the Data from Event   *****************-->
 
     <script type="text/javascript">
-    $('.img1').show();
-          jQuery(document).ready(function() {
+//     $('.img1').show();
+//           jQuery(document).ready(function() {
 
-      function getEvent()
-      {
-               $.ajax(
-                {url: "http://localhost/testingapp/create_database.php?act=gs_searching&module=2",crossDomain: true ,success: function(result)
-       {
-        data = JSON.parse(result);
-        data = data.data;
-        var event_temp ='';
-        for (var i = 1; i <data.length; i++)
-        {
-            var name         = data[i]['name']; 
-            name             = name.substring(0,32);
-            var description  = data[i]['description']; 
-            description = description.substring(0,100);
-        if(data[i]['image']!='')
-        {
-            if (i==1)
-            {
-                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
-            }
-            else
-            {
-             if(i%3==0)
-            {
-                event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+//       function getEvent()
+//       {
+//                $.ajax(
+//                 {url: "http://localhost/testingapp/create_database.php?act=gs_searching&module=2",crossDomain: true ,success: function(result)
+//        {
+//         data = JSON.parse(result);
+//         data = data.data;
+//         var event_temp ='';
+//         for (var i = 1; i <data.length; i++)
+//         {
+//             var name         = data[i]['name']; 
+//             name             = name.substring(0,32);
+//             var description  = data[i]['description']; 
+//             description = description.substring(0,100);
+//         if(data[i]['image']!='')
+//         {
+//             if (i==1)
+//             {
+//                 event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
+//             }
+//             else
+//             {
+//              if(i%3==0)
+//             {
+//                 event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
             
-        }
-        else
-        {
-            event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
-        }
-     }
-}
-        } // End of for Loop
+//         }
+//         else
+//         {
+//             event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/event/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
+//         }
+//      }
+// }
+//         } // End of for Loop
 
-        $("#id2").html(event_temp);
-      //  console.log(event_temp);
-    }}); //End of ajax
+//         $("#id2").html(event_temp);
+//       //  console.log(event_temp);
+//     }}); //End of ajax
 
-} // End of Function
+// } // End of Function
 
-getEvent();
+// getEvent();
 
-});// End of Doucument Ready
+// });// End of Doucument Ready
 
 
 </script>
@@ -1319,6 +1329,15 @@ window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_bla
 }
 
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-102513647-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
