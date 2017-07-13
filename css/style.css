@@ -484,3 +484,7 @@ body{
 .btn-linkedin{
         background-color: #2773b0;
 }
+.bottombutton{
+    position: absolute;
+    bottom: 6%;
+}
