@@ -219,8 +219,8 @@ $(document).ready(function(){
             //  alert(res_data[0].token);return;
               if(res_data[0].token == 1 || res_data[0].token == 3)
               {
-              var detail = '<div class="col-md-12"> <h2 style="margin: 20px 0px">'+res_data[0].title+'</h2><img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px">'+res_data[0].summary+'</h4> <h5>'+res_data[0].description+'</h5> </div>'; $('#detail').html(detail); }else {
-                var shared = '<div class="col-md-6"> <img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"> </div> <div class="col-md-6" style="height:300px;"> <h2>'+res_data[0].title+'</h2> <h5>'+res_data[0].summary+'</h5> <div class="bottombutton1"><a href="'+res_data[0].url+'" class="btn btn-primary" target="_blank">Read More..</a></div> </div> '; $('#shared').html(shared); 
+              var detail = '<div class="col-md-12"> <h2 style="margin: 20px 0px">'+res_data[0].title+'</h2><img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px">'+res_data[0].summary+'</h4> <h5>'+res_data[0].description+'</h5> </div>'; $('#shared').hide();$('#detail').html(detail); }else {
+                var shared = '<div class="col-md-6"> <img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"> </div> <div class="col-md-6" style="height:300px;"> <h2>'+res_data[0].title+'</h2> <h5>'+res_data[0].summary+'</h5> <div class="bottombutton1"><a href="'+res_data[0].url+'" class="btn btn-primary" target="_blank">Read More..</a></div> </div> '; $('#detail').hide(); $('#shared').html(shared); 
 
             }
          }});
@@ -231,10 +231,7 @@ $(document).ready(function(){
 
 function partner()
 {
-
 window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_blank');
-
-
 }
 </script>
     </body>
