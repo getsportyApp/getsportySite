@@ -107,47 +107,15 @@
   </div>
 <!-- toggle div-->
 
-<!-- 
+ 
 
-    <div class="row panel2">
-
-    <div class="col-md-6"> <img
-    src="http://portal.getsporty.in/uploads/resources/resources_1500357144.jpg"
-    style="width: 100%;"> </div> <div class="col-md-6" style="height:300px;"> <h2>
-    Alvin Lim- Some stories never fail to inspire us</h2>
-
-
-
-
-    <h5>For some people life may seem to be cruel during difficult situations & for others these situations represent a perfect opportunity to learn and to look for the real meaning of life. Alvin Lim is one ...</h5>
-
-
-
-    <div class="bottombutton1"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div>
-
+    <div class="row panel2" id="shared">
 
     </div>
 
-    </div>
- -->
+<div class="row panel3" id="detail">
 
-<div class="row panel3">
-
-<div class="col-md-12">
-<img
-    src="http://portal.getsporty.in/uploads/resources/resources_1500357144.jpg"
-    style="width: 100%;"> 
-    </div>
-     <div class="col-md-2"></div>
-    <div class="col-md-8">
-    <h2 style="    margin: 20px 0px">
-    Alvin Lim- Some stories never fail to inspire us</h2>
-     <h5>For some people life may seem to be cruel during difficult situations & for others these situations represent a perfect opportunity to learn and to look for the real meaning of life. Alvin Lim is one ...</h5>
-
-
-</div>
-     <div class="col-md-2"></div>
-</div>
+ </div>
 
 
 
@@ -238,13 +206,32 @@
 
 <script type="text/javascript">
    
+$(document).ready(function(){
+     $.urlParam = function(name){
+          var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+          return results[1] || 0;
+          }
+          var id =  $.urlParam('n');
+      $.ajax({url: "http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=blog_api&token_id=dhs2016&id="+id+"",crossDomain: true ,
+              success: function(result){
+              var res_data = JSON.parse(result);
+              res_data    = res_data.data;
+            //  alert(res_data[0].token);return;
+              if(res_data[0].token == 1 || res_data[0].token == 3)
+              {
+              var detail = '<div class="col-md-12"> <h2 style="margin: 20px 0px">'+res_data[0].title+'</h2><img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px">'+res_data[0].summary+'</h4> <h5>'+res_data[0].description+'</h5> </div>'; $('#shared').hide();$('#detail').html(detail); }else {
+                var shared = '<div class="col-md-6"> <img src="http://portal.getsporty.in/uploads/resources/'+res_data[0].image+'"style="width: 100%;"> </div> <div class="col-md-6" style="height:300px;"> <h2>'+res_data[0].title+'</h2> <h5>'+res_data[0].summary+'</h5> <div class="bottombutton1"><a href="'+res_data[0].url+'" class="btn btn-primary" target="_blank">Read More..</a></div> </div> '; $('#detail').hide(); $('#shared').html(shared); 
+
+            }
+         }});
+
+
+
+    });   
 
 function partner()
 {
-
 window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_blank');
-
-
 }
 </script>
     </body>

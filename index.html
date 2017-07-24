@@ -478,13 +478,14 @@ function getResources()
         var summary = ''; 
                
         for (var i = 1; i < data.length; i++)
-        {    if(data[i]['url'] == '' || data[i]['url'] == null)
+        {    /*if(data[i]['url'] == '' || data[i]['url'] == null)
              {
                 res_url = 'http://darkhorsesports.in/blogdetail.html?n='+data[i]['id']+'';
              }else
              {
                 res_url = data[i]['url'];
-             }
+             }*/
+             res_url     = 'blog_detail.html?n='+data[i]['id']+'';//data[i]['url'];
              title       = data[i]['title'].substring(0,32);
              summary     = data[i]['summary'].substring(0,200);
             if (i==1)
