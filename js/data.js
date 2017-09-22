@@ -1,5 +1,5 @@
 function getResources()
-{
+{ 
     //alert('amit');
    $.ajax({
     url:"http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=blog_api&token_id=dhs2016&token=0,1,3",crossDomain: true ,success: function(result)
