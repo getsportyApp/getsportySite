@@ -8,7 +8,7 @@ $var= $_GET['n'];
 
       include 'config1.php';
       mysql_set_charset("UTF8");
-     $sql="SELECT * FROM gs_jobinfo WHERE id=$var ";
+     $sql="SELECT * FROM gs_tournament_info WHERE id=$var ";
       header('Content-type: text/html; charset=utf-8');
       $result = mysql_query($sql);
   
@@ -123,32 +123,40 @@ $var= $_GET['n'];
     </div>
   </div> -->
 <!-- toggle div-->
- 
+
+<!-- <?php 
+//print_r($row);
+
+
+?> -->
 
 <ul class="">
-    <li class=""><h5>Job Title  - </h5><?php echo $row['title']; ?> </li>
+    <li class=""><h5>Tournament Name  - </h5><?php echo $row['name']; ?> </li>
+    <li class=""><h5>Tournament Address  - </h5><?php echo $row['address_1']; ?> </li>
+    <li class=""><h5>Tournament Address - </h5><?php echo $row['address_2']; ?> </li>
+    <li class=""><h5>Tournament location  - </h5><?php echo $row['location']; ?> </li>
+    <li class=""><h5>Tournament state  - </h5><?php echo $row['state']; ?> </li>
+    <li class=""><h5>Tournament pin  - </h5><?php echo $row['pin']; ?> </li>
+    <li class=""><h5>Tournament description  - </h5><?php echo $row['description']; ?> </li>
+    <li class=""><h5>Tournament sport  - </h5><?php echo $row['sport']; ?> </li>
     <li class=""><h5>Gender  - </h5><?php echo $row['gender']; ?> </li>
-    <li class=""><h5>Job  Type - </h5><?php echo $row['type']; ?> </li>
-    <li class=""><h5>Job Work Experience  - </h5><?php echo $row['work_experience']; ?> </li>
-    <li class=""><h5>Qualification  - </h5><?php echo $row['qualification']; ?> </li>
-    <li class=""><h5>Key Requirement  - </h5><?php echo $row['key_requirement']; ?> </li>
-    <li class=""><h5>Job PIN  - </h5><?php echo $row['org_pin']; ?> </li>
-    <li class=""><h5>Job description  - </h5><?php echo $row['description']; ?> </li>
-    <li class=""><h5>sport  - </h5><?php echo $row['sport']; ?> </li>
-
-
-
-        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organisation_name']; ?> </li>
-        <li class=""><h5>About Organiser   - </h5><?php echo $row['about']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address1']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address2']; ?> </li>
-        <li class=""><h5>Organazition City  - </h5><?php echo $row['city']; ?> </li>
-        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['pin']; ?> </li>
-        <li><h5>Job Link  - </h5>
-        <a href="<?php echo $row['job_link']?>"><?php echo $row['job_link']?></a>
+    <li class=""><h5>Terms and Condition  - </h5><?php echo $row['terms_and_cond1']; ?> </li>
+    <li class=""><h5>Terms and Condition  - </h5><?php echo $row['terms_and_cond2']; ?> </li>
+        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organiser_name']; ?> </li>
+        <li class=""><h5>Mobile  - </h5><?php echo $row['mobile']; ?> </li>
+        <li class=""><h5>Email  - </h5><?php echo $row['email']; ?> </li>
+        <li class=""><h5>Organazition Address  - </h5><?php echo $row['org_address1']; ?> </li>
+        <li class=""><h5>Organazition Address  - </h5><?php echo $row['org_address2']; ?> </li>
+        <li class=""><h5>Organazition City  - </h5><?php echo $row['org_city']; ?> </li>
+        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['org_pin']; ?> </li>
+        <li><h5>Tournament Link  - </h5>
+        <a href="<?php echo $row['tournaments_link']?>"><?php echo $row['tournaments_link']?></a>
          </li>
-         <li class=""><h5>Email  - </h5><?php echo $row['email']; ?> </li>
-          
+         <li class=""><h5>Tournament Start Date  - </h5><?php echo $row['start_date']; ?> </li>
+          <li class=""><h5>Tournament End Date  - </h5><?php echo $row['end_date']; ?> </li>
+           <li class=""><h5>Tournament Event Entry Date  - </h5><?php echo $row['event_entry_date']; ?> </li>
+            <li class=""><h5>Tournament Event End Date  - </h5><?php echo $row['event_end_date']; ?> </li>
+             <li class=""><h5>Tournament Eligibility  - </h5><?php echo $row['eligibility1']; ?> </li>
 </ul>
 
 

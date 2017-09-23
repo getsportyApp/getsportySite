@@ -66,6 +66,7 @@ function getEvent()
              name            = data[i]['name']; 
              description     = data[i]['description']; 
             var Path         = data[i]['Path']; 
+            name             = name.substring(0,26);
             description      = description.substring(0,250);
             if(Path=='E') 
             {
@@ -81,18 +82,18 @@ function getEvent()
         {
             if (i==1)
             {
-                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
+                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'...</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>';
             }
             else
             {
             if(i%3==0)
             {
-                event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
+                event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;"><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'...</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div></div><div class="carousel-item">';   
 
         }
         else
         {
-            event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
+            event_temp +='<div class="col-md-4" ><div class="card" style="height:500px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'...</h4><p class="card-text">'+description+'...</p><a href="#" class="btn btn-primary">Read More..</a></div></div></div>'; 
         }
      }
 }
@@ -128,11 +129,11 @@ function getJob()
         {  
              title           = data[i]['title'];
              summary         = data[i]['description'];
-             title           = title;
+             title           = title.substring(0,26);
              summary         = summary.substring(0,140);
             if (i==0)
             {   
-                job_temp +='<div class="carousel-item active" ><div class="container-fluid pd0"><div class="row"><div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;" ><img style="width:300px;height:200px;" class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+' </h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>';
+                job_temp +='<div class="carousel-item active" ><div class="container-fluid pd0"><div class="row"><div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+' ...</h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>';
             }
             else
             {
@@ -140,14 +141,14 @@ function getJob()
             if(s%3==0)
              {
 
-               job_temp +='<div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img" style="width:300px;height:200px;"><div class="card-block"><h4 class="card-title">'+title+'</h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div></div></div></div><div class="carousel-item"><div class="container-fluid pd0"><div class="row">';   
+               job_temp +='<div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;"><img class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+' ...</h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div></div></div></div><div class="carousel-item"><div class="container-fluid pd0"><div class="row">';   
         }
 
         else
 
         {
 
-           job_temp +='<div class="col-md-4" style="margin-top:20px;"><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img" style="width:300px;height:200px;" ><div class="card-block"><h4 class="card-title">'+title+' </h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>'; 
+           job_temp +='<div class="col-md-4" style="margin-top:20px;"><div class="card" style="height:500px;" ><img class="img-fluid" src="http://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+' ...</h4><p class="card-text">'+summary+' ...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>'; 
 
 
 
