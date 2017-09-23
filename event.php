@@ -1,21 +1,3 @@
-<?php
-$var= $_GET['n'];
-
-//$con = mysql_connect('localhost', 'root', 'mysql');
-// mysql_select_db("getsport_gs", $con);
-
-
-
-      include 'config1.php';
-      mysql_set_charset("UTF8");
-     $sql="SELECT * FROM gs_jobinfo WHERE id=$var ";
-      header('Content-type: text/html; charset=utf-8');
-      $result = mysql_query($sql);
-  
-     while($row = mysql_fetch_assoc($result))
-{       
-?>
-
 
 
 
@@ -26,19 +8,66 @@ $var= $_GET['n'];
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php
+// include('liveapp/getSportyLite/config1.php');
+// include('liveapp/getSportyLite/liteservice.php');
 
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+$var= $_GET['n'];
+
+//$con = mysql_connect('localhost', 'root', 'mysql');
+// mysql_select_db("getsport_gs", $con);
+
+
+
+      include 'config1.php';
+      mysql_set_charset("UTF8");
+     $sql="SELECT * FROM gs_eventinfo WHERE id=$var ";
+      header('Content-type: text/html; charset=utf-8');
+      $result = mysql_query($sql);
+  
+     while($row = mysql_fetch_assoc($result))
+{
+
+// if(!isset($id))
+// {
+//   $where = 'WHERE `token` IN ('.$token.') AND `status` = 1 ORDER BY `date_created` DESC';
+// }else
+// { 
+//   $where = "WHERE `id` = '$id' ";
+// }
+// $req = new liteservice();
+// $res = $req->getBlogData($where);
+
+?>
+
+  <meta name="twitter:dnt" content="on">
+  <meta property="og:url" content="http://getsporty.in/blog.php?n=<?php echo $row['id'];?>" />
+  <meta property="og:image" content="http://getsporty.in/portal/uploads/event/<?php echo $row['image']; ?>">
+  <meta property="og:title" content="<?php echo $row['name']; ?>" /> 
+  <meta property="og:description" content="<?php echo $row['description']; ?>" />  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@getsporty" />
+<meta name="twitter:title" content="<?php echo $row['name']; ?>" />
+<meta name="twitter:description" content="<?php echo $row['summary']; ?>" />
+<meta name="twitter:image" content="http://getsporty.in/portal/uploads/event/<?php echo $row['image']; ?>" />    
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
     
     <title>Getsporty</title>
     <!-- title bar icon-->
-    <link rel="icon" type="image/png" href="img/GS Icon1.png">
+    <!-- <link rel="icon" type="image/png" href="img/GS Icon1.png"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link href="css/compiled.min.css" rel="stylesheet">
-    <link href="css/tournament.css" rel="stylesheet">
+    <link href="css/social.css" rel="stylesheet">
    
     <style>
         .bg-skin-lp {
@@ -104,57 +133,56 @@ $var= $_GET['n'];
                     <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Partner With Us!</a>
                 </li>                                   
             </ul>
+
+           
+                
         </nav>
+
     </header>
 <div class="blog_body">
 <div class="container">
 
-<!-- <div class="panel panel-default panel1">
-    <div class="panel-body" style="    display: -webkit-box;">
-    <div style="padding:22px ;color:white;">Get our app!!
-</div>
-<ul>
-<li style="position: absolute;
-    right: 3%;">
-<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#54c0f1;"></i><span style="color:#54c0f1;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
-</li>
-</ul>
 
-    </div>
-  </div> -->
-<!-- toggle div-->
- 
+
+ <?php 
+//print_r($row);
+
+
+?> 
 
 <ul class="">
-    <li class=""><h5>Job Title  - </h5><?php echo $row['title']; ?> </li>
-    <li class=""><h5>Gender  - </h5><?php echo $row['gender']; ?> </li>
-    <li class=""><h5>Job  Type - </h5><?php echo $row['type']; ?> </li>
-    <li class=""><h5>Job Work Experience  - </h5><?php echo $row['work_experience']; ?> </li>
-    <li class=""><h5>Qualification  - </h5><?php echo $row['qualification']; ?> </li>
-    <li class=""><h5>Key Requirement  - </h5><?php echo $row['key_requirement']; ?> </li>
-    <li class=""><h5>Job PIN  - </h5><?php echo $row['org_pin']; ?> </li>
-    <li class=""><h5>Job description  - </h5><?php echo $row['description']; ?> </li>
-    <li class=""><h5>sport  - </h5><?php echo $row['sport']; ?> </li>
+    <li class=""><h5>Event Name  - </h5><?php echo $row['name']; ?> </li>
+    <li class=""><h5>Event Type  - </h5><?php echo $row['type']; ?> </li>
+    <li class=""><h5>Event Fee Type - </h5><?php echo $row['feetype']; ?> </li>
+    <li class=""><h5>Event Address  - </h5><?php echo $row['address_1']; ?> </li>
+    <li class=""><h5>Event Address  - </h5><?php echo $row['address_2']; ?> </li>
+    <li class=""><h5>Event Location  - </h5><?php echo $row['location']; ?> </li>
+    <li class=""><h5>Event PIN  - </h5><?php echo $row['PIN']; ?> </li>
+    <li class=""><h5>Event description  - </h5><?php echo $row['description']; ?> </li>
+    <li class=""><h5>sport  - </h5><?php echo $row['sport_name']; ?> </li>
+    <li class=""><h5>Terms and Condition  - </h5><?php echo $row['terms_cond1']; ?> </li>
 
 
-
-        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organisation_name']; ?> </li>
-        <li class=""><h5>About Organiser   - </h5><?php echo $row['about']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address1']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address2']; ?> </li>
-        <li class=""><h5>Organazition City  - </h5><?php echo $row['city']; ?> </li>
-        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['pin']; ?> </li>
-        <li><h5>Job Link  - </h5>
-        <a href="<?php echo $row['job_link']?>"><?php echo $row['job_link']?></a>
+        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organizer_name']; ?> </li>
+        <li class=""><h5>Organazition Address  - </h5><?php echo $row['organizer_address_line1']; ?> </li>
+        <li class=""><h5>Organazition Address  - </h5><?php echo $row['organizer_address_line2']; ?> </li>
+        <li class=""><h5>Organazition City  - </h5><?php echo $row['organizer_city']; ?> </li>
+        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['organizer_pin']; ?> </li>
+        <li><h5>Event Link  - </h5>
+        <a href="<?php echo $row['event_links']?>"><?php echo $row['event_links']?></a>
          </li>
-         <li class=""><h5>Email  - </h5><?php echo $row['email']; ?> </li>
-          
+         <li class=""><h5>Event Start Date  - </h5><?php echo $row['start_date']; ?> </li>
+          <li class=""><h5>Event End Date  - </h5><?php echo $row['end_date']; ?> </li>
+           <li class=""><h5> Event Entry Date  - </h5><?php echo $row['entry_start_date']; ?> </li>
+            <li class=""><h5>Event Event End Date  - </h5><?php echo $row['entry_end_date']; ?> </li>
+             <li class=""><h5>Event Eligibility  - </h5><?php echo $row['eligibility1']; ?> </li>
 </ul>
 
 
 
 
 
+ <div class="fb-share-button" data-href="http://getsporty.in/event.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
 
 </div>
 </div>
@@ -197,7 +225,14 @@ function partner()
 window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_blank');
 }
 </script>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     </body>
     </html>
 
