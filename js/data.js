@@ -57,7 +57,7 @@ function getResources()
 function getEvent()
 {
  $.ajax(
-   {url: "http://localhost/testingapp/getSportyLite/litecontroller.php?act=event_and_tour_api",crossDomain: true ,success: function(result)
+   {url: "http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=event_and_tour_api",crossDomain: true ,success: function(result)
        {
        data = JSON.parse(result);
         data = data.data;
@@ -124,7 +124,7 @@ function getEvent()
 function getJob()
 {
    $.ajax({
-    url:"http://localhost/testingapp/getSportyLite/litecontroller.php?act=job_api",crossDomain: true ,success: function(result)
+    url:"http://liveapp.getsporty.in/getSportyLite/litecontroller.php?act=job_api",crossDomain: true ,success: function(result)
     {
         
         data = JSON.parse(result);
