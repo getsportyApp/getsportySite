@@ -1,4 +1,6 @@
 <?php
+include('liveapp/getSportyLite/config1.php');
+include('liveapp/getSportyLite/liteservice.php');
 $var= $_GET['n'];
 
 //$con = mysql_connect('localhost', 'root', 'mysql');
@@ -6,11 +8,10 @@ $var= $_GET['n'];
 
 
 
-      include 'config1.php';
-      mysql_set_charset("UTF8");
-     $sql="SELECT * FROM gs_tournament_info WHERE id=$var ";
-      header('Content-type: text/html; charset=utf-8');
-      $result = mysql_query($sql);
+      // include 'config1.php';
+    mysql_set_charset("UTF8");
+    $sql="SELECT * FROM gs_tournament_info WHERE id=$var ";
+    $result = mysql_query($sql);
   
      while($row = mysql_fetch_assoc($result))
 {       
@@ -27,18 +28,30 @@ $var= $_GET['n'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:dnt" content="on">
+<meta property="og:url" content="http://getsporty.in/tournament.php?n=<?php echo $row['id'];?>" />
+<meta property="og:image" content="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?>">
+<meta property="og:title" content="<?php echo $row['name']; ?>" /> 
+<meta property="og:description" content="<?php echo $row['description']; ?>" />  
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@getsporty" />
+<meta name="twitter:title" content="<?php echo $row['name']; ?>" />
+<meta name="twitter:description" content="<?php echo $row['description']; ?>" />
+<meta name="twitter:image" content="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?>" />    
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
     
     <title>Getsporty</title>
     <!-- title bar icon-->
-    <link rel="icon" type="image/png" href="img/GS Icon1.png">
+    <!-- <link rel="icon" type="image/png" href="img/GS Icon1.png"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link href="css/compiled.min.css" rel="stylesheet">
-    <link href="css/tournament.css" rel="stylesheet">
+    <link href="css/social.css" rel="stylesheet">
    
     <style>
         .bg-skin-lp {
@@ -71,7 +84,7 @@ $var= $_GET['n'];
              
                
                 <li  class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Partner With Us!</a>
+                     <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>     
                               
                 </ul>
@@ -101,7 +114,7 @@ $var= $_GET['n'];
                
                 
                 <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Partner With Us!</a>
+                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
         </nav>
@@ -129,40 +142,104 @@ $var= $_GET['n'];
 
 
 ?> -->
-
+<img src="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?> " style="width:40%;margin-left: 30%; ">
 <ul class="">
-    <li class=""><h5>Tournament Name  - </h5><?php echo $row['name']; ?> </li>
-    <li class=""><h5>Tournament Address  - </h5><?php echo $row['address_1']; ?> </li>
-    <li class=""><h5>Tournament Address - </h5><?php echo $row['address_2']; ?> </li>
-    <li class=""><h5>Tournament location  - </h5><?php echo $row['location']; ?> </li>
-    <li class=""><h5>Tournament state  - </h5><?php echo $row['state']; ?> </li>
-    <li class=""><h5>Tournament pin  - </h5><?php echo $row['pin']; ?> </li>
-    <li class=""><h5>Tournament description  - </h5><?php echo $row['description']; ?> </li>
-    <li class=""><h5>Tournament sport  - </h5><?php echo $row['sport']; ?> </li>
-    <li class=""><h5>Gender  - </h5><?php echo $row['gender']; ?> </li>
-    <li class=""><h5>Terms and Condition  - </h5><?php echo $row['terms_and_cond1']; ?> </li>
-    <li class=""><h5>Terms and Condition  - </h5><?php echo $row['terms_and_cond2']; ?> </li>
-        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organiser_name']; ?> </li>
-        <li class=""><h5>Mobile  - </h5><?php echo $row['mobile']; ?> </li>
-        <li class=""><h5>Email  - </h5><?php echo $row['email']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['org_address1']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['org_address2']; ?> </li>
-        <li class=""><h5>Organazition City  - </h5><?php echo $row['org_city']; ?> </li>
-        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['org_pin']; ?> </li>
-        <li><h5>Tournament Link  - </h5>
-        <a href="<?php echo $row['tournaments_link']?>"><?php echo $row['tournaments_link']?></a>
-         </li>
-         <li class=""><h5>Tournament Start Date  - </h5><?php echo $row['start_date']; ?> </li>
-          <li class=""><h5>Tournament End Date  - </h5><?php echo $row['end_date']; ?> </li>
-           <li class=""><h5>Tournament Event Entry Date  - </h5><?php echo $row['event_entry_date']; ?> </li>
-            <li class=""><h5>Tournament Event End Date  - </h5><?php echo $row['event_end_date']; ?> </li>
-             <li class=""><h5>Tournament Eligibility  - </h5><?php echo $row['eligibility1']; ?> </li>
+<li class="">
+ <h5>Tournament Name  - <small class="text-muted"><?php echo $row['name']; ?></small></h5>
+</li>
+<li class="">
+ <h5>Tournament Address  -<small class="text-muted"><?php echo $row['address_1']; ?></small></h5>
+    </li>
+    <li class="">
+ <h5>Tournament Address -<small class="text-muted"><?php echo $row['address_2']; ?></small></h5>
+
+    </li>
+    <li class="">
+ <h5>Tournament location  -<small class="text-muted"><?php echo $row['location']; ?></small></h5>
+
+    </li>
+    <li class="">
+ <h5>Tournament state  -<small class="text-muted"><?php echo $row['state']; ?></small></h5>
+    </li>
+<li class="">
+ <h5>Tournament pin  -<small class="text-muted"><?php echo $row['pin']; ?></small></h5>
+</li>
+<li class="">
+<h5>Tournament description  -<small class="text-muted"><?php echo $row['description']; ?></small></h5>
+</li>
+<li class="">
+ <h5>Tournament sport  - <small class="text-muted"><?php echo $row['sport']; ?></small></h5>
+    </li>
+    <li class="">
+ <h5>Gender  -<small class="text-muted"><?php echo $row['gender']; ?></small></h5>
+    </li>
+    <li class="">
+ <h5>Terms and Condition  - <small class="text-muted"><?php echo $row['terms_and_cond1']; ?></small></h5>
+    </li>
+    <li class="">
+ <h5>Terms and Condition  - <small class="text-muted"><?php echo $row['terms_and_cond2']; ?></small></h5>
+
+    </li>
+        <li class="">
+ <h5>Organiser Name  - <small class="text-muted"><?php echo $row['organiser_name']; ?></small></h5>
+        </li>
+        <li class="">
+ <h5>Mobile  - <small class="text-muted"><?php echo $row['mobile']; ?></small></h5>
+        </li>
+        <li class="">
+ <h5>Email  -<small class="text-muted"><?php echo $row['email']; ?></small></h5>
+        </li>
+        <li class="">
+ <h5>Organazition Address  - <small class="text-muted"><?php echo $row['org_address1']; ?></small></h5>
+        </li>
+        <li class="">
+ <h5>Organazition Address  -<small class="text-muted"><?php echo $row['org_address2']; ?></small></h5>
+        </li>
+        <li class="">
+
+ <h5>Organazition City  -<small class="text-muted"><?php echo $row['org_city']; ?></small></h5>
+
+        </li>
+        <li class="">
+ <h5>Organazition Pin  -<small class="text-muted"><?php echo $row['org_pin']; ?></small></h5>
+        </li>
+ <li>
+ <h5>Tournament Link  -<small class="text-muted"><a href="<?php echo $row['tournaments_link']?>"><?php echo $row['tournaments_link']?></a></small></h5> 
+</li>
+<li class="">
+<h5>Tournament Start Date  - <small class="text-muted"><?php echo $row['start_date']; ?></small></h5>
+</li>
+<li class="">
+<h5>Tournament End Date  -<small class="text-muted"><?php echo $row['end_date']; ?></small></h5>
+</li>
+<li class="">
+ <h5>Tournament Event Entry Date  - <small class="text-muted"><?php echo $row['event_entry_date']; ?></small></h5></li>
+ <li class="">
+ <h5>Tournament Event End Date  - <small class="text-muted"><?php echo $row['event_end_date']; ?></small></h5>
+</li>
+<li class="">
+ <h5>Tournament Eligibility  -<small class="text-muted"><?php echo $row['eligibility1']; ?></small></h5>
+</li>
 </ul>
 
+<div id="fixedsocial">
+ <div class="fb-share-button" data-href="http://getsporty.in/tournament.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
+     <div class="twitterflat"><a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="<?php echo $row['name']; ?>" data-url="http://getsporty.in/tournament.php?n=<?php echo $row['id']; ?>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div> 
+  
+  
+  <div class="linkedinflat">
+  <a href=" https://www.linkedin.com/shareArticle?mini=true&url=http://getsporty.in/tournament.php?n=<?php echo $row['id']; ?>&title=<?php echo $row['name'];?>
+&summary=<?php echo $row['description']; ?>&source=LinkedIn" ><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  </div>
+
+   <div class="g-plusflat">
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+     <div class="g-plus" data-action="share" data-height="24"></div> 
+  </div>
 
 
-
-
+</div>
 
 </div>
 </div>
@@ -205,6 +282,14 @@ function partner()
 window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_blank');
 }
 </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
     </body>
     </html>

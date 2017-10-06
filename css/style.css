@@ -9,15 +9,20 @@
         background: #54c0f1;
  }
  .panel2{
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,0.16), 0 0px 10px 0 rgba(0,0,0,0.12);
     margin: 20px 0px;
         padding: 10px;
        
  }
  .panel3{
-       
     margin: 20px 0px;
         padding: 10px;
+       
+ }
+.panel4{
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    margin: 20px 0px;
+        padding: 20px;
        
  }
  .bottombutton1{

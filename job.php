@@ -5,19 +5,18 @@ $var= $_GET['n'];
 // mysql_select_db("getsport_gs", $con);
 
 
+include('liveapp/getSportyLite/config1.php');
+include('liveapp/getSportyLite/liteservice.php');
 
-      include 'config1.php';
+      // include 'config1.php';
       mysql_set_charset("UTF8");
-     $sql="SELECT * FROM gs_jobinfo WHERE id=$var ";
-      header('Content-type: text/html; charset=utf-8');
+     $sql="SELECT * FROM gs_jobInfo WHERE id=$var ";
+     /* header('Content-type: text/html; charset=utf-8');*/
       $result = mysql_query($sql);
   
      while($row = mysql_fetch_assoc($result))
 {       
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,19 +25,43 @@ $var= $_GET['n'];
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="text/html; charset=UTF-8" name="Content-Type" />
+<meta name="twitter:dnt" content="on">
+<meta property="og:url" content="http://getsporty.in/job.php?n=<?php echo $row['id'];?>" />
+<meta property="og:image" content="http://getsporty.in/portal/uploads/job/<?php echo $row['image']; ?>">
+<meta property="og:title" content="<?php echo $row['name']; ?>" /> 
+<meta property="og:description" content="<?php echo $row['description']; ?>" />  
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="twitter:site" content="@getsporty" />
+<meta name="twitter:url" content="http://getsporty.in/job.php?n=<?php echo $row['id'];?>"/>
+<meta name="twitter:creator" content="@getsporty">
+<meta name="twitter:title" content="<?php echo $row['title']; ?>"/>
+<meta name="twitter:description" content="<?php echo $row['description']; ?>" />
+<meta name="twitter:image" content="http://getsporty.in/portal/uploads/job/<?php echo $row['image']; ?>"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="medium" content="article" />
+
+
+
+
+
+
+
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
     
     <title>Getsporty</title>
     <!-- title bar icon-->
-    <link rel="icon" type="image/png" href="img/GS Icon1.png">
+    <!-- <link rel="icon" type="image/png" href="img/GS Icon1.png"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link href="css/compiled.min.css" rel="stylesheet">
-    <link href="css/tournament.css" rel="stylesheet">
+    <link href="css/social.css" rel="stylesheet">
    
     <style>
         .bg-skin-lp {
@@ -71,7 +94,7 @@ $var= $_GET['n'];
              
                
                 <li  class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Partner With Us!</a>
+                     <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>     
                               
                 </ul>
@@ -101,7 +124,7 @@ $var= $_GET['n'];
                
                 
                 <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Partner With Us!</a>
+                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
         </nav>
@@ -125,36 +148,153 @@ $var= $_GET['n'];
 <!-- toggle div-->
  
 
+
+
+
+
 <ul class="">
-    <li class=""><h5>Job Title  - </h5><?php echo $row['title']; ?> </li>
-    <li class=""><h5>Gender  - </h5><?php echo $row['gender']; ?> </li>
-    <li class=""><h5>Job  Type - </h5><?php echo $row['type']; ?> </li>
-    <li class=""><h5>Job Work Experience  - </h5><?php echo $row['work_experience']; ?> </li>
-    <li class=""><h5>Qualification  - </h5><?php echo $row['qualification']; ?> </li>
-    <li class=""><h5>Key Requirement  - </h5><?php echo $row['key_requirement']; ?> </li>
-    <li class=""><h5>Job PIN  - </h5><?php echo $row['org_pin']; ?> </li>
-    <li class=""><h5>Job description  - </h5><?php echo $row['description']; ?> </li>
-    <li class=""><h5>sport  - </h5><?php echo $row['sport']; ?> </li>
-
-
-
-        <li class=""><h5>Organiser Name  - </h5><?php echo $row['organisation_name']; ?> </li>
-        <li class=""><h5>About Organiser   - </h5><?php echo $row['about']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address1']; ?> </li>
-        <li class=""><h5>Organazition Address  - </h5><?php echo $row['address2']; ?> </li>
-        <li class=""><h5>Organazition City  - </h5><?php echo $row['city']; ?> </li>
-        <li class=""><h5>Organazition Pin  - </h5><?php echo $row['pin']; ?> </li>
-        <li><h5>Job Link  - </h5>
-        <a href="<?php echo $row['job_link']?>"><?php echo $row['job_link']?></a>
+    <li class="">
+ 
+     <h5>
+   Job Title  -
+        <small class="text-muted"><?php echo $row['title']; ?></small>
+      </h5>
          </li>
-         <li class=""><h5>Email  - </h5><?php echo $row['email']; ?> </li>
+    <li class="">
+    <h5>
+     Gender  -
+        <small class="text-muted"><?php echo $row['gender']; ?> </small>
+      </h5>
+  
+    </li>
+    <li class="">
+    <h5>
+     Job  Type - 
+        <small class="text-muted"><?php echo $row['type']; ?></small>
+      </h5>
+    </li>
+    <li class="">
+
+    <h5>
+    Job Work Experience  - 
+        <small class="text-muted"><?php echo $row['work_experience']; ?></small>
+      </h5> 
+    </li>
+    <li class="">
+
+
+    <h5>
+     Qualification  - 
+        <small class="text-muted"><?php echo $row['qualification']; ?></small>
+      </h5>
+    </li>
+    <li class="">
+
+    <h5>
+    Key Requirement  -
+        <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
+      </h5>
+    </li>
+    <li class="">
+
+    <h5>
+     Job PIN  - 
+        <small class="text-muted"><?php echo $row['org_pin']; ?></small>
+      </h5>
+    </li>
+    <li class="">
+
+    <h5>
+    Job description  -
+        <small class="text-muted"><?php echo $row['description']; ?></small>
+      </h5>
+    </li>
+    <li class="">
+
+    <h5>
+    sport  -
+        <small class="text-muted"><?php echo $row['sport']; ?></small>
+      </h5>
+    </li>
+
+
+
+        <li class="">
+
+    <h5>
+    Organiser Name  - 
+        <small class="text-muted"><?php echo $row['organisation_name']; ?></small>
+      </h5>
+        </li>
+        <li class="">
+
+    <h5>
+    About Organiser   -
+        <small class="text-muted"><?php echo $row['about']; ?></small>
+      </h5>
+        </li>
+<li class="">
+    <h5>Organazition Address  -<small class="text-muted"><?php echo $row['address1']; ?></small></h5>
+</li>
+        <li class="">
+
+    <h5>
+     Organazition Address  -
+        <small class="text-muted"><?php echo $row['address2']; ?></small>
+      </h5>
+        </li>
+        <li class="">
+
+    <h5>
+    Organazition City  - 
+        <small class="text-muted"><?php echo $row['city']; ?></small>
+      </h5>
+        </li>
+        <li class="">
+
+    <h5>
+     Organazition Pin  - 
+        <small class="text-muted"><?php echo $row['pin']; ?></small>
+      </h5> 
+        </li>
+        <li>
+
+    <h5>
+   Job Link  - 
+        <small class="text-muted"> <a href="<?php echo $row['job_link']?>"><?php echo $row['job_link']?></a></small>
+      </h5>
+         </li>
+         <li class="">
+
+    <h5>
+     Email -
+        <small class="text-muted"><?php echo $row['email']; ?></small>
+      </h5>
+        </li>
           
 </ul>
 
+<div id="fixedsocial">
+
+ <div class="fb-share-button" data-href="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
+     <div class="twitterflat"><a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="<?php echo $row['title']; ?>" data-url="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-show-count="true">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div> 
 
 
+    <!--  <a href="http://twitter.com/intent/tweet?lang=en&url=http://getsporty.in/job.php?n=<?php// echo $row['id']; ?>&text=<?php// echo $row['title'];?>" class="btn-social icon-font-before icon-twitter-solid-before horizontal" target="new" data-social-type="horizontal" data-social-tool="twitter" data-short-text="Tweet" data-long-text="Share with Twitter">Twitter</a> -->
+  
+  
+  <div class="linkedinflat">
+  <a href=" https://www.linkedin.com/shareArticle?mini=true&url=http://getsporty.in/job.php?n=<?php echo $row['id']; ?>&title=<?php echo $row['title'];?>
+&summary=<?php echo $row['description']; ?>&source=LinkedIn" ><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+  </div>
 
+   <div class="g-plusflat">
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+     <div class="g-plus" data-action="share" data-height="24"></div> 
+  </div>
 
+</div>
 
 </div>
 </div>
@@ -197,6 +337,14 @@ function partner()
 window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_blank');
 }
 </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
     </body>
     </html>
