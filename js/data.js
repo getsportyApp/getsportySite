@@ -150,7 +150,6 @@ function getEvent()
     }}); //End of ajax
 
 
-
 } // End of Function
 
 
@@ -206,7 +205,8 @@ function getJob()
             summary         = data[i]['description'];
             res_url     = 'job.php?n='+data[i]['id']+'';
             location    = data[i]['city'];
-            var secondDate = data[i]['date_created'];
+            var secondDate = data[i]['date_updated'];
+             //alert(secondDate);
             var finddiffDays = daydiff(parseDate(), secondDate);
             var diffDays = '';
             if(finddiffDays == 0)

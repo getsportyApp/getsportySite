@@ -80,7 +80,7 @@ $res = $req->getBlogData($where);
              
                
                 <li  class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Register With Us!</a> 
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Register With Us!</a> 
                 </li>     
                               
                 </ul>
@@ -110,7 +110,7 @@ $res = $req->getBlogData($where);
                
                 
                 <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
 
@@ -129,7 +129,7 @@ $res = $req->getBlogData($where);
 <ul>
 <li style="position: absolute;
     right: 3%;">
-<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#54c0f1;"></i><span style="color:#54c0f1;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
+<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#000;"></i><span style="color:#000;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
 </li>
 </ul>
 
@@ -149,7 +149,7 @@ $res = $req->getBlogData($where);
  ?>
 <div class="row panel3" id="detail">
 
-<div class="col-md-12"> <h2 style="margin: 20px 0px"><?php echo $res[0]['title'];?></h2><img src="http://portal.getsporty.in/uploads/resources/<?php echo $res[0]['image'];?> " style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px"><?php echo $res[0]['summary'];?></h4> <h5><?php echo $res[0]['description'];?></h5> </div>
+<div class="col-md-12"> <h2 style="margin: 20px 0px"><?php echo $res[0]['title'];?></h2><img src="http://portal.getsporty.in/uploads/resources/<?php echo $res[0]['image'];?> " style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px"><?php echo $res[0]['summary'];?></h4> <p><?php echo $res[0]['description'];?></p> </div>
 
 
  </div>
