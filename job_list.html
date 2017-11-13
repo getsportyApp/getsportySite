@@ -5,7 +5,7 @@
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="keywords" content="Latest Jobs">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
     
@@ -168,8 +168,8 @@
         <!--/.Copyright-->
 
     </footer>
- <script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled.min.js"></script>
-    
+<!--  <script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled.min.js"></script> -->
+        <script type="text/javascript" src="js/compiled.min.js"></script>
         <script type="text/javascript" src="js/modernizr.js"></script>
             <script type="text/javascript" src="js/main.min.js"></script>
 
@@ -180,7 +180,7 @@
  <script type="text/javascript">
     var data = '';
       jQuery(document).ready(function() {
-         $.ajax({url: "http://localhost/testingapp/getSportyLite/litecontroller.php?act=job_list_api",crossDomain: true ,success: function(result){
+         $.ajax({url: "https://getsporty.in/liveapp/getSportyLite/litecontroller.php?act=job_list_api",crossDomain: true ,success: function(result){
              var data = JSON.parse(result);
              data = data.data;
              id = 1;
@@ -214,10 +214,10 @@
                 
                 diffDays = '<b>Posted : </b>' + finddiffDays + ' days ago';
             }
-              var desp = (data.description).substr(0,500);
+              var desp = (data.description).substr(0,300);
 
-            temp +='<div class="row panel2" id="shared"><div class="col-md-6"> <img src="http://portal.getsporty.in/uploads/job/'+data.image+'" style="width: 550px;height: 300px;"> </div> <div class="col-md-6" style="height:300px;"> <h3>'+data.title+'</h3> <div class="post-prev-info">'+diffDays+'<span class="slash-divider">/</span><a href="#">'+data.organisation_name+'</a></div><h5><small class="text-muted">'+desp+'...</small></h5><div class="bottombutton1"><a href="javascript:void(0)" id="'+data.id+'" onclick="openModal(this.id)" class="font-poppins">Read More</a></div> </div></div>'; 
-  
+
+            temp +='<div class="row panel2" id="shared"><div class="col-md-6"> <img src="https://getsporty.in/portal/uploads/job/'+data.image+'" style="width: 550px;height: 300px;"> </div> <div class="col-md-6" style="height:300px;"> <h3>'+data.title+'</h3> <div class="post-prev-info">'+diffDays+'<span class="slash-divider"></span><h5>Gender - <small class="text-muted">'+data.gender+'</small></h5></div><h5>Email - <small class="text-muted">'+data.email+'</small></h5><h5>Organisation Name - <small class="text-muted">'+data.organisation_name+'</small></h5><div class="bottombutton1"><a href="javascript:void(0)" id="'+data.id+'" onclick="openModal(this.id)" class="font-poppins">Read More</a></div> </div></div>';
               }
               i++;
             });
@@ -232,7 +232,7 @@
             for(i=0;i<limit;i++)
             {
               j=i+1;
-              page_no += '<li style="margin-left: 8%;"><a href="javascript:void(0)" id="'+j+'" onclick="getData(this.id)">'+j+'</a></li>';
+              page_no += '<li style="margin-left:2%;"><a href="javascript:void(0)" id="'+j+'" onclick="getData(this.id)">'+j+'</a></li>';
 
             }
             var paginate_footer = '<li><a href="javascript:void(0)"></a></li>';
