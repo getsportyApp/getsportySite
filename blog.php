@@ -21,6 +21,7 @@ $req = new liteservice();
 $res = $req->getBlogData($where);
 
 
+ $desc =  preg_replace('([""]+)', " ", $res[0]['summary']);
 
 ?>
   <meta name="twitter:dnt" content="on">
@@ -28,12 +29,12 @@ $res = $req->getBlogData($where);
   <meta property="og:url" content="http://getsporty.in/blog.php?n=<?php echo $res[0]['id'];?>" />
   <meta property="og:image" content="http://getsporty.in/portal/uploads/resources/<?php echo $res[0]['image']; ?>">
   <meta property="og:title" content="<?php echo $res[0]['title']; ?>" /> 
-  <meta property="og:description" content="<?php echo $res[0]['summary']; ?>" />  
+  <meta property="og:description" content="<?php echo $desc; ?>" />  
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@getsporty" />
 <meta name="twitter:title" content="<?php echo $res[0]['title']; ?>" />
-<meta name="twitter:description" content="<?php echo $res[0]['summary']; ?>" />
+<meta name="twitter:description" content="<?php echo $desc; ?>" />
 <meta name="twitter:image" content="http://getsporty.in/portal/uploads/resources/<?php echo $res[0]['image']; ?>" />    
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
     
@@ -80,7 +81,7 @@ $res = $req->getBlogData($where);
              
                
                 <li  class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Register With Us!</a> 
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" target="_blank" onclick="partner()">Register With Us!</a> 
                 </li>     
                               
                 </ul>
@@ -110,7 +111,7 @@ $res = $req->getBlogData($where);
                
                 
                 <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
 
@@ -129,7 +130,7 @@ $res = $req->getBlogData($where);
 <ul>
 <li style="position: absolute;
     right: 3%;">
-<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#54c0f1;"></i><span style="color:#54c0f1;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
+<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#000;"></i><span style="color:#000;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
 </li>
 </ul>
 

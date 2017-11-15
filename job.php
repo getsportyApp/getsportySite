@@ -29,8 +29,11 @@ include('liveapp/getSportyLite/liteservice.php');
 <meta name="twitter:dnt" content="on">
 <meta property="og:url" content="http://getsporty.in/job.php?n=<?php echo $row['id'];?>" />
 <meta property="og:image" content="http://getsporty.in/portal/uploads/job/<?php echo $row['image']; ?>">
-<meta property="og:title" content="<?php echo $row['name']; ?>" /> 
+<meta property="og:title" content="<?php echo $row['title']; ?>" /> 
 <meta property="og:description" content="<?php echo $row['description']; ?>" />  
+
+<meta name="title" content="<?php echo $row['title']; ?>"/>
+
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
@@ -94,7 +97,7 @@ include('liveapp/getSportyLite/liteservice.php');
              
                
                 <li  class="nav-item last">
-                     <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+                     <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>     
                               
                 </ul>
@@ -124,7 +127,7 @@ include('liveapp/getSportyLite/liteservice.php');
                
                 
                 <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
         </nav>
@@ -132,119 +135,110 @@ include('liveapp/getSportyLite/liteservice.php');
 <div class="blog_body">
 <div class="container">
 
-<!-- <div class="panel panel-default panel1">
+<div class="panel panel-default panel1">
     <div class="panel-body" style="    display: -webkit-box;">
     <div style="padding:22px ;color:white;">Get our app!!
 </div>
 <ul>
 <li style="position: absolute;
     right: 3%;">
-<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#54c0f1;"></i><span style="color:#54c0f1;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
+<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#000;"></i><span style="color:#000;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
 </li>
 </ul>
 
     </div>
-  </div> -->
+  </div>
 <!-- toggle div-->
  
 
+<div class="row panel2" id="shared">
+<div class="col-md-6"> 
+<img src="http://getsporty.in/portal/uploads/job/<?php echo $row['image']; ?>"  style="width:520px; height: 360px;"> 
+</div>
 
 
 
+<div class="col-md-6" style="height:300px;"> 
+<h2><?php echo $row['title']; ?></h2>
+<ul class="">
+    <li class="">
+    <h5>
+    sport  -
+    <small class="text-muted"><?php echo $row['sport']; ?></small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>
+    Gender  -
+    <small class="text-muted"><?php echo $row['gender']; ?> </small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>
+    Job Type - 
+    <small class="text-muted"><?php echo $row['type']; ?></small>
+    </h5>
+    </li>
+        <li class="">
+    <h5>
+     Email -
+    <small class="text-muted"><?php echo $row['email']; ?></small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>
+    Job Work Experience  - 
+    <small class="text-muted"><?php echo $row['work_experience']; ?></small>
+    </h5> 
+    </li>
+
+</ul> 
+
+</div>
+</div>
+
+
+<div class="row panel4" id="detail">
+<div class="col-md-12">
 
 <ul class="">
     <li class="">
- 
-     <h5>
-   Job Title  -
-        <small class="text-muted"><?php echo $row['title']; ?></small>
-      </h5>
-         </li>
-    <li class="">
-    <h5>
-     Gender  -
-        <small class="text-muted"><?php echo $row['gender']; ?> </small>
-      </h5>
-  
-    </li>
-    <li class="">
-    <h5>
-     Job  Type - 
-        <small class="text-muted"><?php echo $row['type']; ?></small>
-      </h5>
-    </li>
-    <li class="">
-
-    <h5>
-    Job Work Experience  - 
-        <small class="text-muted"><?php echo $row['work_experience']; ?></small>
-      </h5> 
-    </li>
-    <li class="">
-
-
-    <h5>
-     Qualification  - 
-        <small class="text-muted"><?php echo $row['qualification']; ?></small>
-      </h5>
-    </li>
-    <li class="">
-
-    <h5>
-    Key Requirement  -
-        <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
-      </h5>
-    </li>
-    <li class="">
-
-    <h5>
-     Job PIN  - 
-        <small class="text-muted"><?php echo $row['org_pin']; ?></small>
-      </h5>
-    </li>
-    <li class="">
-
     <h5>
     Job description  -
         <small class="text-muted"><?php echo $row['description']; ?></small>
       </h5>
     </li>
+
     <li class="">
-
     <h5>
-    sport  -
-        <small class="text-muted"><?php echo $row['sport']; ?></small>
-      </h5>
+    Qualification  - 
+    <small class="text-muted"><?php echo $row['qualification']; ?></small>
+    </h5>
     </li>
-
-
-
-        <li class="">
-
+       <li class="">
+    <h5>
+    Key Requirement  -
+    <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
+    </h5>
+    </li>
+    <li class="">
     <h5>
     Organiser Name  - 
-        <small class="text-muted"><?php echo $row['organisation_name']; ?></small>
-      </h5>
-        </li>
-        <li class="">
-
+    <small class="text-muted"><?php echo $row['organisation_name']; ?></small>
+    </h5>
+    </li>
+    <li class="">
     <h5>
     About Organiser   -
         <small class="text-muted"><?php echo $row['about']; ?></small>
       </h5>
-        </li>
-<li class="">
-    <h5>Organazition Address  -<small class="text-muted"><?php echo $row['address1']; ?></small></h5>
 </li>
-        <li class="">
-
-    <h5>
-     Organazition Address  -
-        <small class="text-muted"><?php echo $row['address2']; ?></small>
-      </h5>
-        </li>
-        <li class="">
-
+<li class="">
+    <h5>Organazition Address  -<small class="text-muted"><?php echo $row['address1']; ?></small>
+      ,  <small class="text-muted"><?php echo $row['address2']; ?></small>
+    </h5>
+</li>
+<li class="">
     <h5>
     Organazition City  - 
         <small class="text-muted"><?php echo $row['city']; ?></small>
@@ -260,23 +254,31 @@ include('liveapp/getSportyLite/liteservice.php');
         <li>
 
     <h5>
-   Job Link  - 
-        <small class="text-muted"> <a href="<?php echo $row['job_link']?>"><?php echo $row['job_link']?></a></small>
+   For more info  - 
+    <small class="text-muted"><a href="<?php echo $row['job_link']?>" target="_blank">Click here !</a></small>
       </h5>
          </li>
-         <li class="">
 
-    <h5>
-     Email -
-        <small class="text-muted"><?php echo $row['email']; ?></small>
-      </h5>
-        </li>
-          
 </ul>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
 
 <div id="fixedsocial">
 
- <div class="fb-share-button" data-href="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
+
+<div class="fb-share-button" data-href="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
 
      <div class="twitterflat"><a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="<?php echo $row['title']; ?>" data-url="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-show-count="true">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div> 
 
@@ -342,7 +344,7 @@ window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_bla
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 

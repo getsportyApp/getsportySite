@@ -13,21 +13,15 @@ $var= $_GET['n'];
     $sql="SELECT * FROM gs_tournament_info WHERE id=$var ";
     $result = mysql_query($sql);
   
-     while($row = mysql_fetch_assoc($result))
-{       
+while($row = mysql_fetch_assoc($result))
+{
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="twitter:dnt" content="on">
 <meta property="og:url" content="http://getsporty.in/tournament.php?n=<?php echo $row['id'];?>" />
 <meta property="og:image" content="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?>">
@@ -39,21 +33,14 @@ $var= $_GET['n'];
 <meta name="twitter:title" content="<?php echo $row['name']; ?>" />
 <meta name="twitter:description" content="<?php echo $row['description']; ?>" />
 <meta name="twitter:image" content="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?>" />    
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
-    
-    <title>Getsporty</title>
-    <!-- title bar icon-->
-    <!-- <link rel="icon" type="image/png" href="img/GS Icon1.png"> -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- CSS -->
-    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link href="css/compiled.min.css" rel="stylesheet">
-    <link href="css/social.css" rel="stylesheet">
-   
-    <style>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">    
+<title>Getsporty</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="css/compiled.min.css" rel="stylesheet">
+<link href="css/social.css" rel="stylesheet">   
+<style>
         .bg-skin-lp {
             background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg'); 
             background-size: cover; 
@@ -81,20 +68,12 @@ $var= $_GET['n'];
 </div>
         <div class="collapse navbar-collapse mob-nav" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navmob" >
-             
-               
                 <li  class="nav-item last">
-                     <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
-                </li>     
-                              
+                     <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+                </li>                  
                 </ul>
         </div>
-<!-- 03A9F4 -DARKER
-4FC3F7 - LIGHTER  -->
-    <!--Double navigation-->
     <header>
-
-        <!-- Navbar -->
         <nav class="navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar double-nav">
             <!-- Breadcrumb-->
 <div class="navbar-header trigger">
@@ -111,52 +90,91 @@ $var= $_GET['n'];
                 </li>                                
             </ul>           
             <ul class="nav navbar-nav ml-auto flex-row" >
-               
-                
-                <li class="nav-item last">
-                    <a id="link-7" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
+            <li class="nav-item last">
+                    <a id="link-7" style="background-color:#fff; color:#03a9f4;" class="nav-link" href="javascript:void(0)" onclick="partner()">Register With Us!</a>
                 </li>                                   
             </ul>
-        </nav>
-    </header>
+</nav>
+</header>
 <div class="blog_body">
 <div class="container">
-
-<!-- <div class="panel panel-default panel1">
-    <div class="panel-body" style="    display: -webkit-box;">
-    <div style="padding:22px ;color:white;">Get our app!!
+<div class="panel panel-default panel1">
+<div class="panel-body" style="    display: -webkit-box;">
+<div style="padding:22px ;color:white;">Get our app!!
 </div>
 <ul>
-<li style="position: absolute;
-    right: 3%;">
-<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#54c0f1;"></i><span style="color:#54c0f1;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
+<li style="position: absolute;right: 3%;">
+<a class="btn btn-primary1" href="https://play.google.com/store/apps/details?id=getsportylite.darkhoprsesport.com.getsportylite&hl=en" style=" background-color: #ffffff;   margin-top: 10px;"><i class="fa fa-android" aria-hidden="true" style="color:#000;"></i><span style="color:#000;"> Download For Android</span><span class="glyphicon glyphicon-user"></span></a>
 </li>
 </ul>
+</div>
+</div>
 
-    </div>
-  </div> -->
-<!-- toggle div-->
+<input type="hidden" id="start_date" value="<?php echo $row['start_date'];?>">
+<input type="hidden" id="end_date" value="<?php echo $row['end_date'];?>">
+<input type="hidden" id="event_entry_date" value="<?php echo $row['event_entry_date'];?>">
+<input type="hidden" id="event_end_date" value="<?php echo $row['event_end_date'];?>">
 
-<!-- <?php 
-//print_r($row);
-
-
-?> -->
-<img src="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?> " style="width:40%;margin-left: 30%; ">
-<ul class="">
-<li class="">
- <h5>Tournament Name  - <small class="text-muted"><?php echo $row['name']; ?></small></h5>
-</li>
-<li class="">
- <h5>Tournament Address  -<small class="text-muted"><?php echo $row['address_1']; ?></small></h5>
+<div class="row panel2" id="shared">
+<div class="col-md-6"> 
+<img src="http://getsporty.in/portal/uploads/tournament/<?php echo $row['image']; ?>" style="width: 100%;"> 
+</div> 
+<div class="col-md-6" style="height:300px;"> 
+    <h2><?php echo $row['name']; ?></h2>
+    <ul class="">
+    <li class="">
+    <h5>
+    Gender - 
+    <small class="text-muted"><?php echo $row['gender']; ?></small>
+    </h5>
     </li>
     <li class="">
- <h5>Tournament Address -<small class="text-muted"><?php echo $row['address_2']; ?></small></h5>
+    <h5>
+    sport  -
+    <small class="text-muted"><?php echo $row['sport']; ?> </small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>Mobile  - <small class="text-muted"><?php echo $row['mobile']; ?></small></h5>
+    </li>
+    <li class="">
+    <h5>Email  -<small class="text-muted"><?php echo $row['email']; ?></small></h5>
+    </li>
 
+    <li class="">
+    <h5>
+     Tournament Start From  :
+    <small class="text-muted" name="start_date"> </small>
+    to    <small class="text-muted" name="end_date"></small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>
+    Entry Start From  :
+    <small class="text-muted" name="event_entry_date"> </small>
+    to    <small class="text-muted" name="event_end_date"></small>
+    </h5>
+    </li>
+</ul> 
+
+</div>
+</div>
+
+<div class="row panel4" id="detail">
+<div class="col-md-12">
+<ul class="">
+<li class="">
+<h5>Tournament description  -<small class="text-muted"><?php echo $row['description']; ?></small></h5>
+</li>
+<li class="">
+ <h5>Tournament Address  -
+<small class="text-muted"><?php echo $row['address_1']; ?></small> , 
+<small class="text-muted"><?php echo $row['address_2']; ?></small>
+
+ </h5>
     </li>
     <li class="">
  <h5>Tournament location  -<small class="text-muted"><?php echo $row['location']; ?></small></h5>
-
     </li>
     <li class="">
  <h5>Tournament state  -<small class="text-muted"><?php echo $row['state']; ?></small></h5>
@@ -164,37 +182,29 @@ $var= $_GET['n'];
 <li class="">
  <h5>Tournament pin  -<small class="text-muted"><?php echo $row['pin']; ?></small></h5>
 </li>
-<li class="">
-<h5>Tournament description  -<small class="text-muted"><?php echo $row['description']; ?></small></h5>
-</li>
-<li class="">
- <h5>Tournament sport  - <small class="text-muted"><?php echo $row['sport']; ?></small></h5>
-    </li>
-    <li class="">
- <h5>Gender  -<small class="text-muted"><?php echo $row['gender']; ?></small></h5>
-    </li>
-    <li class="">
- <h5>Terms and Condition  - <small class="text-muted"><?php echo $row['terms_and_cond1']; ?></small></h5>
-    </li>
-    <li class="">
- <h5>Terms and Condition  - <small class="text-muted"><?php echo $row['terms_and_cond2']; ?></small></h5>
 
+
+<li class="">
+ <h5>Terms and Condition  - <small class="text-muted"><?php echo $row['terms_and_cond1']; ?></small>
+ ,  <small class="text-muted"><?php echo $row['terms_and_cond2']; ?></small>
+ </h5>
     </li>
+<!--     <li class="">
+ <h5>Terms and Condition  - <small class="text-muted"><?php// echo $row['terms_and_cond2']; ?></small></h5>
+
+    </li> -->
         <li class="">
  <h5>Organiser Name  - <small class="text-muted"><?php echo $row['organiser_name']; ?></small></h5>
         </li>
         <li class="">
- <h5>Mobile  - <small class="text-muted"><?php echo $row['mobile']; ?></small></h5>
+ <h5>Organazition Address  - 
+   <small class="text-muted"><?php echo $row['org_address1']; ?></small>
+ , <small class="text-muted"><?php echo $row['org_address2']; ?></small>
+ </h5>
         </li>
-        <li class="">
- <h5>Email  -<small class="text-muted"><?php echo $row['email']; ?></small></h5>
-        </li>
-        <li class="">
- <h5>Organazition Address  - <small class="text-muted"><?php echo $row['org_address1']; ?></small></h5>
-        </li>
-        <li class="">
- <h5>Organazition Address  -<small class="text-muted"><?php echo $row['org_address2']; ?></small></h5>
-        </li>
+<!--         <li class="">
+ <h5>Organazition Address  -<small class="text-muted"><?php// echo $row['org_address2']; ?></small></h5>
+        </li> -->
         <li class="">
 
  <h5>Organazition City  -<small class="text-muted"><?php echo $row['org_city']; ?></small></h5>
@@ -204,23 +214,23 @@ $var= $_GET['n'];
  <h5>Organazition Pin  -<small class="text-muted"><?php echo $row['org_pin']; ?></small></h5>
         </li>
  <li>
- <h5>Tournament Link  -<small class="text-muted"><a href="<?php echo $row['tournaments_link']?>"><?php echo $row['tournaments_link']?></a></small></h5> 
+ <h5>For more info -<small class="text-muted"><a href="<?php echo $row['tournaments_link']?>" target="_blank"> click here</a></small></h5> 
 </li>
-<li class="">
-<h5>Tournament Start Date  - <small class="text-muted"><?php echo $row['start_date']; ?></small></h5>
-</li>
-<li class="">
-<h5>Tournament End Date  -<small class="text-muted"><?php echo $row['end_date']; ?></small></h5>
-</li>
-<li class="">
- <h5>Tournament Event Entry Date  - <small class="text-muted"><?php echo $row['event_entry_date']; ?></small></h5></li>
- <li class="">
- <h5>Tournament Event End Date  - <small class="text-muted"><?php echo $row['event_end_date']; ?></small></h5>
-</li>
+
+
 <li class="">
  <h5>Tournament Eligibility  -<small class="text-muted"><?php echo $row['eligibility1']; ?></small></h5>
 </li>
 </ul>
+
+
+
+</div>
+</div>
+
+<!-- 
+<img src="http://getsporty.in/portal/uploads/tournament/<?php// echo $row['image']; ?> " style="width:40%;margin-left: 30%; "> -->
+
 
 <div id="fixedsocial">
  <div class="fb-share-button" data-href="http://getsporty.in/tournament.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
@@ -289,7 +299,37 @@ window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_bla
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+
+function formatDate(date) 
+{
+  var monthNames = ["Jan", "Feb", "Mar","Apr", "May", "June", "July","Aug", "Sept", "Oct","Nov", "Dec"];
+  var newdate =  new Date(date); 
+  var day = newdate.getDate();
+  var monthIndex = newdate.getMonth();
+  var year = newdate.getFullYear().toString().substr(-2);
+  return day + ' ' + monthNames[monthIndex] + " ' " + year;
+}
+
+
+var start_date = formatDate($("#start_date").val());
+var end_date = formatDate($("#end_date").val());
+var event_entry_date = formatDate($("#event_entry_date").val());
+var event_end_date = formatDate($("#event_end_date").val());
+
+//alert(start_date);
+
+$("small[name='start_date']").html(start_date);
+$("small[name='end_date']").html(end_date);
+$("small[name='event_entry_date']").html(event_entry_date);
+$("small[name='event_end_date']").html(event_end_date);
+
+
+
+
+
+</script>
 
     </body>
     </html>
