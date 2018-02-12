@@ -150,7 +150,7 @@ $res = $req->getBlogData($where);
  ?>
 <div class="row panel3" id="detail">
 
-<div class="col-md-12"> <h2 style="margin: 20px 0px"><?php echo $res[0]['title'];?></h2><img src="http://portal.getsporty.in/uploads/resources/<?php echo $res[0]['image'];?> " style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px"><?php echo $res[0]['summary'];?></h4> <h5><?php echo $res[0]['description'];?></h5> </div>
+<div class="col-md-12"> <h2 style="margin: 20px 0px"><?php echo $res[0]['title'];?></h2><img src="http://portal.getsporty.in/uploads/resources/<?php echo $res[0]['image'];?> " style="width: 100%;"><div class="col-md-12"><h4 style="margin: 20px 0px"><?php echo $res[0]['summary'];?></h4> <p><?php echo $res[0]['description'];?></p> </div>
 
 
  </div>

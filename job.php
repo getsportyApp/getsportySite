@@ -179,6 +179,7 @@ include('liveapp/getSportyLite/liteservice.php');
     <small class="text-muted"><?php echo $row['type']; ?></small>
     </h5>
     </li>
+<<<<<<< HEAD
         <li class="">
     <h5>
      Email -
@@ -197,6 +198,32 @@ include('liveapp/getSportyLite/liteservice.php');
 </div>
 </div>
 
+=======
+    <li class="">
+    <h5>
+    Job Work Experience  - 
+    <small class="text-muted"><?php echo $row['work_experience']; ?></small>
+    </h5> 
+    </li>
+    <li class="">
+    <h5>
+    Qualification  - 
+    <small class="text-muted"><?php echo $row['qualification']; ?></small>
+    </h5>
+    </li>
+ 
+    <li class="">
+    <h5>
+     Email -
+    <small class="text-muted"><?php echo $row['email']; ?></small>
+    </h5>
+    </li>
+</ul> 
+
+</div>
+</div>
+
+>>>>>>> 4a52532390960ab72a25961b089de5998e4fe2c5
 
 <div class="row panel4" id="detail">
 <div class="col-md-12">
@@ -209,6 +236,7 @@ include('liveapp/getSportyLite/liteservice.php');
       </h5>
     </li>
 
+<<<<<<< HEAD
     <li class="">
     <h5>
     Qualification  - 
@@ -221,6 +249,14 @@ include('liveapp/getSportyLite/liteservice.php');
     <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
     </h5>
     </li>
+=======
+       <li class="">
+    <h5>
+    Key Requirement  -
+    <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
+    </h5>
+    </li>
+>>>>>>> 4a52532390960ab72a25961b089de5998e4fe2c5
     <li class="">
     <h5>
     Organiser Name  - 
