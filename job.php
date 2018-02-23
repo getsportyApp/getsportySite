@@ -31,6 +31,9 @@ include('liveapp/getSportyLite/liteservice.php');
 <meta property="og:image" content="http://getsporty.in/portal/uploads/job/<?php echo $row['image']; ?>">
 <meta property="og:title" content="<?php echo $row['title']; ?>" /> 
 <meta property="og:description" content="<?php echo $row['description']; ?>" />  
+
+<meta name="title" content="<?php echo $row['title']; ?>"/>
+
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
@@ -176,6 +179,26 @@ include('liveapp/getSportyLite/liteservice.php');
     <small class="text-muted"><?php echo $row['type']; ?></small>
     </h5>
     </li>
+<<<<<<< HEAD
+        <li class="">
+    <h5>
+     Email -
+    <small class="text-muted"><?php echo $row['email']; ?></small>
+    </h5>
+    </li>
+    <li class="">
+    <h5>
+    Job Work Experience  - 
+    <small class="text-muted"><?php echo $row['work_experience']; ?></small>
+    </h5> 
+    </li>
+
+</ul> 
+
+</div>
+</div>
+
+=======
     <li class="">
     <h5>
     Job Work Experience  - 
@@ -200,6 +223,7 @@ include('liveapp/getSportyLite/liteservice.php');
 </div>
 </div>
 
+>>>>>>> 4a52532390960ab72a25961b089de5998e4fe2c5
 
 <div class="row panel4" id="detail">
 <div class="col-md-12">
@@ -212,12 +236,27 @@ include('liveapp/getSportyLite/liteservice.php');
       </h5>
     </li>
 
+<<<<<<< HEAD
+    <li class="">
+    <h5>
+    Qualification  - 
+    <small class="text-muted"><?php echo $row['qualification']; ?></small>
+    </h5>
+    </li>
        <li class="">
     <h5>
     Key Requirement  -
     <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
     </h5>
     </li>
+=======
+       <li class="">
+    <h5>
+    Key Requirement  -
+    <small class="text-muted"><?php echo $row['key_requirement']; ?></small>
+    </h5>
+    </li>
+>>>>>>> 4a52532390960ab72a25961b089de5998e4fe2c5
     <li class="">
     <h5>
     Organiser Name  - 
@@ -272,7 +311,10 @@ include('liveapp/getSportyLite/liteservice.php');
 
 <div id="fixedsocial">
 
- <div class="fb-share-button" data-href="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
+
+<div class="fb-share-button" data-href="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+
 
      <div class="twitterflat"><a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="<?php echo $row['title']; ?>" data-url="http://getsporty.in/job.php?n=<?php echo $row['id']; ?>" data-show-count="true">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div> 
 
@@ -338,7 +380,7 @@ window.open('http://portal.getsporty.in/index.php/forms/new_registration/','_bla
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 

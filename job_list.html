@@ -2,13 +2,26 @@
 <html lang="en">
  
 <head>
+
     <!-- Required meta tags always come first -->
+<<<<<<< HEAD
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Latest Jobs">
+
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
+    
+    <title>Getsporty</title>
+=======
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="Latest Jobs">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Bubbler+One" rel="stylesheet">
   <title>Getsporty</title>
+>>>>>>> 00bbf9c549e6aab3304e32c3131008e056d0d742
     <!-- title bar icon-->
   <link rel="icon" type="image/png" href="img/GS Icon1.png">
     <!-- Font Awesome -->
@@ -169,7 +182,12 @@
         <script type="text/javascript" src="js/modernizr.js"></script>
             <script type="text/javascript" src="js/main.min.js"></script>
 
-
+<script>
+  var m = document.createElement('meta'); 
+  m.name = 'description'; 
+  m.content = 'This tutorial has some helpful information for you, if you want to track how many hits come from browsers where JavaScript has been disabled.'; 
+  document.head.appendChild(m);
+</script>
 
 
    
@@ -180,8 +198,29 @@
              var data = JSON.parse(result);
              data = data.data;
              id = 1;
-          getResources(data,id);
+
+            meta_data(data[0]);
+
+           // console.log(data[0]);
+
+           getResources(data,id);
          }});
+
+ function meta_data(metadata)
+ {
+  document.getElementTag('HEAD')(0).innerHTML ='<META NAME="keywords" CONTENT="how to dynamically inert META Tag in an active document of HTML?" >';
+
+// var meta=document.createElement('meta');
+// meta.name='viewport';
+
+// meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+
+// document.getElementsByTagName('head')[0].appendChild(meta);
+
+ }
+
+
+
           var getResources = function(data,id)
           {    
               $("#lod").hide();
@@ -284,5 +323,15 @@ function daydiff(first, second)
 
 
 </script>
+
+
+<script type='text/javascript' data-cfasync='false'>
+  var link=document.createElement('meta');
+  link.name="shareaholic:url";
+  link.content=document.location;
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+
     </body>
     </html>

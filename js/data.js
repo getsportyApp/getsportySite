@@ -1,3 +1,4 @@
+
 function getResources()
 {
    $.ajax({
@@ -297,10 +298,5 @@ function formatDate(date)
   var year = newdate.getFullYear().toString().substr(-2);
   return day + '-' + monthNames[monthIndex] + '-' + year;
 }
-
-
-
-
-
 
 
