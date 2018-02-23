@@ -1,6 +1,5 @@
 function getResources()
-{ 
-    //alert('amit');
+{
    $.ajax({
     url:"https://getsporty.in/liveapp/getSportyLite/litecontroller.php?act=blog_api&token_id=dhs2016&token=0,1,3",crossDomain: true ,success: function(result)
     {
@@ -12,18 +11,18 @@ function getResources()
         var title   = ''; 
         var summary = ''; 
         var s = 0;
-        for (var i = 0; i < data.length; i++)
+        for (var i = 0; i < 11; i++)
         {  
-             res_url     = 'blog.php?n='+data[i]['id']+'';//data[i]['url'];
-             title       = data[i]['title'].substring(0,32);
-             summary     = data[i]['summary'].substring(0,200);
+            res_url     = 'blog.php?n='+data[i]['id']+'';//data[i]['url'];
+            title       = data[i]['title'].substring(0,32);
+            summary     = data[i]['summary'].substring(0,200);
             if (i==0)
             {   
-                resources_temp +='<div class="carousel-item active" ><div class="container-fluid pd0"><div class="row"><div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;" ><img class="img-fluid" src="https://getsporty.in/portal/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>';
+              resources_temp +='<div class="carousel-item active" ><div class="container-fluid pd0"><div class="row"><div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;" ><img class="img-fluid" src="https://getsporty.in/portal/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>';
             }
             else
             {
-                    s = i + 1;
+              s = i + 1;
             if(s%3==0)
             {
                resources_temp +='<div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:500px;"><img class="img-fluid" src="https://getsporty.in/portal/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div></div></div></div><div class="carousel-item"><div class="container-fluid pd0"><div class="row">';   
@@ -32,9 +31,11 @@ function getResources()
             {
               resources_temp +='<div class="col-md-4" style="margin-top:20px;"><div class="card" style="height:500px;" ><img class="img-fluid" src="https://getsporty.in/portal/uploads/resources/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+data[i]['title']+'</h4><p class="card-text">'+summary+'...</p><div class="bottombutton"><a href="'+res_url+'" class="btn btn-primary" target="_blank">Read More..</a></div></div></div></div>'; 
             }
-}
+            }
         } // End of for Loop
 
+       // resources_temp = ""; 
+        resources_temp += '<div style="margin-top:25%"><a href="https://getsporty.in/latest-sports-news-resources.htm"><h3>View More-</h3></a></div>';
         $("#id1").html(resources_temp);
 
     }}); //End of ajax
@@ -71,7 +72,8 @@ function GetSortOrder(prop) {
 function getEvent()
 {
  $.ajax(
-   {url: "https://getsporty.in/liveapp/getSportyLite/litecontroller.php?act=event_and_tour_api",crossDomain: true ,success: function(result)
+   {
+       url: "https://getsporty.in/liveapp/getSportyLite/litecontroller.php?act=event_and_tour_api",crossDomain: true ,success: function(result)
        {
        data = JSON.parse(result);
         data = data.data;
@@ -80,7 +82,10 @@ function getEvent()
 
        data.sort(GetSortOrder("date_diff"));
 
+    //    console.log(JSON.stringify(data));
       //  data.sort(sortByProperty('date_diff'));
+      
+
         var event_temp ='';
         var name ='';
         var description ='';
@@ -104,10 +109,11 @@ function getEvent()
 
           //  var description = $(description1).text();
 
-           // alert(description);
-            
+           
+        
             if(Path=='E') 
             {
+               // alert(i +" - Event"); 
             var image_path = "https://getsporty.in/portal/uploads/event/";
             url = 'event.php?n='+data[i]['id']+'';
             startdate = '<b>Start From :  </b>' + formatDate(data[i]['start_date']);
@@ -120,6 +126,8 @@ function getEvent()
             }
             else
             {
+               // alert(i +" - tournament"); 
+
                 var image_path = "https://getsporty.in/portal/uploads/tournament/";
                 url     = 'tournament.php?n='+data[i]['id']+'';
                 startdate = '<b>Start From : </b>' + formatDate(data[i]['start_date']);
@@ -130,28 +138,30 @@ function getEvent()
                 sport =  data[i]['sport'];
             
             }
-
-
             
         if(data[i]['image']!='')
         {
             if (i==1)
             {
-                event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:430px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><span style="float:left;" class="label label-success">'+ startdate +'</span><span style="float:right;" class="label label-warning">'+ enddate +'</span><br><span style="float:left;" class="label label-success">'+ entrydate +'</span><span style="float:right;" class="label label-warning">'+ entryenddate +'</span><br><i class="fa fa-location-arrow" style="float: left;"  aria-hidden="true">'+location+'</i><i class="fa fa-futbol-o" style="float: right;" aria-hidden="true"> '+ sport +' </i><br><div><p class="card-text">'+ description +'...</p></div><div class="bottombutton" style="bottom:6px;"><a href="'+url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div>';
+            event_temp +='<div class="carousel-item active" ><div class="col-md-4" ><div class="card" style="height:430px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><span style="float:left;" class="label label-success">'+ startdate +'</span><span style="float:right;" class="label label-warning">'+ enddate +'</span><br><span style="float:left;" class="label label-success">'+ entrydate +'</span><span style="float:right;" class="label label-warning">'+ entryenddate +'</span><br><i class="fa fa-location-arrow" style="float: left;"  aria-hidden="true">'+location+'</i><i class="fa fa-futbol-o" style="float: right;" aria-hidden="true"> '+ sport +' </i><br><div><p class="card-text">'+ description +'...</p></div><div class="bottombutton" style="bottom:6px;"><a href="'+url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div>';
             }
             else
             {
             if(i%3==0)
             {
-                event_temp +='<div class="col-md-4" ><div class="card" style="height:430px;"><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><span style="float:left;" class="label label-success">'+ startdate +'</span><span style="float:right;" class="label label-warning">'+ enddate +'</span><br><span style="float:left;" class="label label-success">'+ entrydate +'</span><span style="float:right;" class="label label-warning">'+ entryenddate +'</span><br><i class="fa fa-location-arrow" style="float: left;"  aria-hidden="true">'+location+'</i><i class="fa fa-futbol-o" style="float: right;" aria-hidden="true"> '+ sport +' </i><br><div><p class="card-text">'+description+'...</p></div><div class="bottombutton" style="bottom:6px;"><a href="'+url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div></div><div class="carousel-item">';   
-        }
-        else
-        {
+                event_temp +='<div class="col-md-4" ><div class="card" style="height:430px;"><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><span style="float:left;" class="label label-success">'+ startdate +'</span><span style="float:right;" class="label label-warning">'+ enddate +'</span><br><span style="float:left;" class="label label-success">'+ entrydate +'</span><span style="float:right;" class="label label-warning">'+ entryenddate +'</span><br><i class="fa fa-location-arrow" style="float: left;"  aria-hidden="true">'+location+'</i><i class="fa fa-futbol-o" style="float: right;" aria-hidden="true"> '+ sport +' </i><br><div><p class="card-text">'+description+'...</p></div><div class="bottombutton" style="bottom:6px;"><a href="'+url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div></div><div class="carousel-item"><div class="container-fluid pd0"><div class="row">';   
+            }
+            else
+            {
             event_temp +='<div class="col-md-4" ><div class="card" style="height:430px;" ><img class="img-fluid" src="'+image_path+''+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+name+'</h4><span style="float:left;" class="label label-success">'+ startdate +'</span><span style="float:right;" class="label label-warning">'+ enddate +'</span><br><span style="float:left;" class="label label-success">'+ entrydate +'</span><span style="float:right;" class="label label-warning">'+ entryenddate +'</span><br><i class="fa fa-location-arrow" style="float: left;"  aria-hidden="true">'+location+'</i><i class="fa fa-futbol-o" style="float: right;" aria-hidden="true"> '+ sport +' </i><br><div><p class="card-text">'+description+'...</p></div><div class="bottombutton" style="bottom:6px;"><a href="'+url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div>'; 
-        }
+            }
      }
 }
+    //    console.log(event_temp);
+        // alert(event_temp);
         } // End of for Loop
+
+         
 
         $("#id2").html(event_temp);
        // console.log(event_temp);
@@ -245,13 +255,11 @@ function getJob()
             {
                         s = i + 1;
             if(s%3==0)
-             {
+            {
 
                job_temp +='<div class="col-md-4" style="margin-top:20px;" ><div class="card" style="height:450px;"><img style="width:337px;height:200px;"  class="img-fluid" src="https://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><span class="label label-warning">'+diffDays+'</span><i class="fa fa-location-arrow"  style="float: right;"  aria-hidden="true">'+location+'</i><span style="float:left" class="label label-warning">'+org_name+'</span><br><p class="card-text">'+summary+' </p><div class="bottombutton" style="bottom:6px;"><a href="'+res_url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div></div></div></div><div class="carousel-item"><div class="container-fluid pd0"><div class="row">';   
-        }
-
+            }
         else
-
         {
 
            job_temp +='<div class="col-md-4" style="margin-top:20px;"><div class="card" style="height:450px;" ><img style="width:337px;height:200px;"  class="img-fluid" src="https://getsporty.in/portal/uploads/job/'+data[i]['image']+'" alt="img"><div class="card-block"><h4 class="card-title">'+title+'</h4><span class="label label-warning">'+diffDays+'</span><i class="fa fa-location-arrow" style="float: right;" aria-hidden="true">'+location+'</i><span style="float:left" class="label label-warning">'+org_name+'</span><br><p class="card-text">'+summary+' </p><div class="bottombutton" style="bottom:6px;"><a href="'+res_url+'"  class="btn btn-primary" target="_blank">View</a></div></div></div></div>'; 
@@ -263,6 +271,13 @@ function getJob()
 }
 
         } // End of for Loop
+
+        //job_temp = "";
+
+        //  job_temp +='<div class="col-md-4" style="margin-top:20px;"><div class="card"><img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap"><div class="card-body"><h4 class="card-title">Card title</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p><a href="#" class="btn btn-primary">Button</a></div></div></div>';
+
+       job_temp += '<div style="margin-top:25%"><a href="https://getsporty.in/govt-private-sector-sports-jobs.html"><h3>View More-</h3></a></div>';
+
 
         $("#id3").html(job_temp);
 
